@@ -1,0 +1,24 @@
+<div class="cm-data-list-group margin-top-large">
+  {{#.}}
+  <h2 class="cm-data-list-title">Limites para {{ divisao }}.</h2>
+  {{#tipos}}
+  <dl class="cm-data-list">
+    <dt>{{ titulo }}</dt>
+    <dd class="cm-double-data">
+      <span>Limite Padr&atilde;o</span>
+      <span>{{ padrao }}</span>
+    </dd>
+    <dd class="cm-double-data">
+      <span>Limite Maior</span>
+      <span>{{ forte }}</span>
+    </dd>
+    {{#extra}}
+    <dd class="cm-double-data cm-data-info">
+      <span>*{{ titulo }}</span>
+      <span>{{ valor }}</span>
+    </dd>
+    {{/extra}}
+  </dl>
+  {{/tipos}} {{/.}}
+  <dl class="cm-data-list"></dl>
+</div>

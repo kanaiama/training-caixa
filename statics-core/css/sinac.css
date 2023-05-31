@@ -1,0 +1,608 @@
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-display: auto;
+  src: url("../fontawesome/webfonts/fa-regular-400.eot");
+  src: url("../fontawesome/webfonts/fa-regular-400.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fontawesome/webfonts/fa-regular-400.woff2") format("woff2"),
+    url("../fontawesome/webfonts/fa-regular-400.woff") format("woff"),
+    url("../fontawesome/webfonts/fa-regular-400.ttf") format("truetype"),
+    url("../fontawesome/webfonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: bold;
+  font-display: auto;
+  src: url("../fontawesome/webfonts/fa-solid-900.eot");
+  src: url("../fontawesome/webfonts/fa-solid-900.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fontawesome/webfonts/fa-solid-900.woff2") format("woff2"),
+    url("../fontawesome/webfonts/fa-solid-900.woff") format("woff"),
+    url("../fontawesome/webfonts/fa-solid-900.ttf") format("truetype"),
+    url("../fontawesome/webfonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+@font-face {
+  font-family: "futura-bold";
+  font-weight: bold;
+  src: url("../fonts/futuraBold/futuraBold.eot");
+  src: url("../fonts/futuraBold/futuraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/futuraBold/futuraBold.woff") format("woff"),
+    url("../fonts/futuraBold/futuraBold.ttf") format("truetype"),
+    url("../fonts/futuraBold/futuraBold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "futura-book";
+  font-weight: bold;
+  src: url("../fonts/futuraBold/futuraBold.eot");
+  src: url("../fonts/futuraBold/futuraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/futuraBold/futuraBold.woff") format("woff"),
+    url("../fonts/futuraBold/futuraBold.ttf") format("truetype"),
+    url("../fonts/futuraBold/futuraBold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "futura-book";
+  font-weight: normal;
+  letter-spacing: 2px;
+  src: url("../fonts/futuraBook/futuraBook.eot");
+  src: url("../fonts/futuraBook/futuraBook.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/futuraBook/futuraBook.woff") format("woff"),
+    url("../fonts/futuraBook/futuraBook.ttf") format("truetype"),
+    url("../fonts/futuraBook/futuraBook.svg") format("svg");
+}
+
+body {
+  background: #f4f4f6;
+  color: #1f2a47;
+  padding: 16px;
+  font-size: 16px;
+}
+
+hr {
+    border-top: 2px solid #cacaca !important;
+}
+
+#conteudo * {
+  font-family: futura-book;
+  font-weight: normal;
+}
+
+body #conteudo > * * {
+  font-family: futura-book;
+  font-weight: normal;
+}
+
+#conteudo > article {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: none !important;
+}
+
+#conteudo > article .titleNav {
+  background: #005ca9;
+  min-height: unset !important;
+}
+
+#conteudo > article .titleNav tr {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#conteudo > article .titleNav td {
+  padding: 16px;
+}
+
+#conteudo > article .titleNav .lineGreyTable h2 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+  color: #ffffff !important;
+}
+
+#conteudo > article .titleNav .lineTableWhite {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.buttonTitlesReturn {
+  padding: 0;
+}
+
+.buttonTitlesReturn img {
+  display: none;
+}
+
+.buttonTitlesReturn:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  content: "\f060";
+  font-size: 1.5rem;
+  color: #ffffff !important;
+}
+
+form#frmQstPerfil > table:first-of-type:not(.alertGrey) {
+  display: none;
+}
+
+#tabelaQuestionario td {
+  display: block;
+  margin: 0 !important;
+  width: unset !important;
+}
+
+#conteudo .questTop {
+  background: unset !important;
+  padding: 0 !important;
+  border: 0 !important;
+  margin-top: 32px !important;
+  padding-left: 32px !important;
+}
+
+#conteudo .questTop b {
+  font-family: "futura-bold" !important;
+  font-weight: bold !important;
+  color: #005ca9 !important;
+}
+
+.questImg {
+  display: none;
+}
+
+#frmQstPerfil table tr td {
+  padding: 0;
+  width: unset !important;
+}
+
+form#frmQstPerfil #tabelaQuestionario .quest {
+  padding: 8px 16px !important;
+  border: 1px solid #e8e9ec;
+  border-radius: 3px;
+  margin-top: 16px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+#frmQstPerfil table tr td.quest div {
+  float: unset;
+}
+
+#frmQstPerfil table tr td .quest_invest label {
+  float: unset;
+  display: block;
+  text-align: unset;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: unset !important;
+}
+
+#conteudo #frmQstPerfil .quest_invest {
+  width: unset !important;
+  margin: 0 !important;
+  font-size: 14px !important;
+  margin-left: 8px !important;
+}
+
+#conteudo .footer_cad_perfil_cvv label {
+  padding: 0;
+  margin: 32px 0 0 0;
+  width: unset !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+#cbgInv {
+  margin: 0%;
+  width: unset;
+  margin-top: 48px;
+}
+
+#cbgInv #btnRecusar {
+  margin-bottom: 8px;
+  background: #f39200;
+  box-shadow: unset !important;
+  border: 1px solid #f39200 !important;
+  border-radius: 4px !important;
+  background: unset !important;
+  color: #f39200 !important;
+  padding: 12px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+}
+
+#cbgInv #continuar {
+  margin-bottom: 32px;
+  background: #f39200;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 1px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  padding: 12px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+}
+
+body #conteudo input[type="radio"],
+body #conteudo input[type="checkbox"] {
+  position: relative;
+  width: 0;
+  height: 24px;
+  margin-right: 24px !important;
+  color: #058ce1 !important;
+}
+
+body #conteudo input[type="radio"]:checked,
+body #conteudo input[type="checkbox"]:checked {
+  color: #f39200 !important;
+}
+
+body #conteudo input[type="radio"]:disabled,
+body #conteudo input[type="checkbox"]:disabled {
+  color: #a5aab5 !important;
+}
+
+input[type="radio"]:before,
+input[type="checkbox"]:before {
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  line-height: 1;
+}
+
+input[type="radio"]:before {
+  content: "\f111";
+  font-size: 24px;
+}
+
+input[type="checkbox"]:before {
+  content: "\f0c8";
+  font-size: 24px;
+}
+
+input[type="radio"]:checked:before {
+  content: "\f192";
+}
+
+input[type="checkbox"]:checked:before {
+  content: "\f14a";
+}
+
+#frmQstPerfil[action="aceita_perfil.processa"] {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  background: #005ca9;
+  background-image: url(../img/background_sinac.png);
+  background-size: 100%;
+}
+
+#frmQstPerfil .alertGrey {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: unset !important;
+}
+
+#frmQstPerfil .alertGrey * {
+  color: #ffffff !important;
+}
+
+#frmQstPerfil .alertGrey tbody {
+  display: block;
+}
+
+#frmQstPerfil .alertGrey tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#frmQstPerfil .alertGrey tr td img {
+  display: none;
+}
+
+#frmQstPerfil .alertGrey tr td:first-child:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  content: "\f47f";
+  font-size: 75px;
+  color: #ffffff !important;
+  margin-bottom: 24px !important;
+  display: block;
+}
+
+#frmQstPerfil .alertGrey tr td:first-child:after {
+  content: "Precisamos nos conhecer melhor!";
+  text-align: center;
+  font-family: futura-bold !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+
+#frmQstPerfil .alertGrey tr:after {
+  content: "Responda um r�pido question�rio que tem por finalidade ajudar voc� a identificar o seu";
+  margin-top: 16px;
+  line-height: 21px;
+  text-align: center;
+  font-size: 14px !important;
+}
+
+#frmQstPerfil .alertGrey tr td.message_alert {
+  display: none;
+}
+
+#frmQstPerfil .alertGrey + #cbgInv {
+  margin: 0;
+}
+
+#frmQstPerfil .alertGrey + #cbgInv #continuar {
+  margin: 0;
+}
+
+#frmQstPerfil .alertGrey + #cbgInv:before {
+  content: "perfil de investidor.";
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
+  font-family: futura-bold !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+  color: #ffffff !important;
+}
+
+#conteudo #frmQstPerfil #chkDeclara {
+  margin-right: 32px !important;
+}
+
+#_saiba_mais_,
+#__divRelativo {
+  display: none;
+}
+
+#conteudo fieldset > div.title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold !important;
+  font-size: 16px !important;
+}
+
+#conteudo textarea {
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  width: calc(100% - 24px) !important;
+  border: 1px solid #d6d7d9 !important;
+  border-radius: 4px !important;
+  resize: none;
+  height: unset !important;
+  background: white !important;
+}
+
+#conteudo textarea#txt {
+  margin-top: 32px !important;
+}
+
+#__div_espacamento__,
+#frmComboTermo,
+#apl_sac_ouvid,
+#btnImprimir,
+#btnSalvar {
+  display: none;
+}
+
+#ibc_tabela {
+  margin: 0 !important;
+  height: unset !important;
+}
+
+.content {
+  height: 100%;
+  padding: 32px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+#btnDiscordo {
+  display: block;
+  margin: 32px 0 0 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+#conteudo #btnConcordo {
+  margin-bottom: 16px;
+  background: #f39200;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 1px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  padding: 12px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+}
+
+#conteudo #btnRetornarbtnDiscordo {
+  margin-bottom: 0;
+  background: #f39200;
+  box-shadow: unset !important;
+  border: 1px solid #f39200 !important;
+  border-radius: 4px !important;
+  background: unset !important;
+  color: #f39200 !important;
+  padding: 12px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+}
+
+#ibc_tabela + div {
+  width: unset !important;
+  float: unset !important;
+  margin-top: 48px !important;
+}
+
+#ibc_tabela + div > fieldset {
+  margin: 0;
+}
+
+#conteudo label[for="chkConcordo"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex !important;
+  margin: 0 !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.internal {
+  padding: 0;
+}
+
+.topo {  
+  text-align: center;
+  margin-top: 32px !important;
+  margin-bottom: 0px;
+}
+
+.link {
+  text-align: center;
+  color: #277eb6 !important;
+  font-size: 14px;
+  text-decoration: underline  !important;
+}
+
+.link:visited {
+    color: #660066 !important;
+}
+
+.ambima {
+    border-radius: 8px;
+    border: 1px solid #cacaca;
+    font-size: 14px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+}
+
+.ambima-icon {
+    content: url("../img/anbima-logo.png");
+    float: right;
+    vertical-align: middle;
+}
+
+.ambima-note {
+    color: #3f4a67;
+    font-size: 12px;
+}
+
+#aceiteAcoesOnLine > table table td:first-child {
+  display: none;
+}
+
+#aceiteAcoesOnLine > table table #aplPerfil {
+  float: unset !important;
+  margin: 0 !important;
+  margin-top: 16px !important;
+}
+
+#aceiteAcoesOnLine {
+  padding: 0 16px 24px 16px;
+}
+
+#aceiteAcoesOnLine #acoes_online_cx {
+  color: #1f2a47;  
+}
+
+#aceiteAcoesOnLine #apl_botoes_nac {
+  width: 85%;
+  background: transparent !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+}
+
+#aceiteAcoesOnLine #apl_botoes_nac button {
+  width: 100%;
+  background: white;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12),
+    0px 1px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #f39200 !important;
+  border-radius: 4px !important;
+  color: #f39200 !important;
+  padding: 12px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+}
+
+#aceiteAcoesOnLine > table + div {
+  display: block !important;
+  width: 100%;
+}
+
+#aceiteAcoesOnLine #apl_botoes_nac2 {
+  width: 90%;
+  margin-top: 8px;
+  background: transparent !important;
+  border-radius: 4px !important;
+  color: white !important;
+  padding: 6px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+}
+
+#aceiteAcoesOnLine #apl_botoes_nac2 button {
+  width: 100%;
+  background: #f39200;
+  border-radius: 4px !important;
+  color: white !important;
+  border: 0 !important;
+  padding: 12px 24px !important;
+  height: unset !important;
+  font-weight: bold !important;
+}

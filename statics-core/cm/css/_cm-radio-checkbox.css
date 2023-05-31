@@ -1,0 +1,7 @@
+.cm-radio,
+.cm-checkbox {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}

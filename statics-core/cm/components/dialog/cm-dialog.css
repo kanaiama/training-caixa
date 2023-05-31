@@ -1,0 +1,112 @@
+[data-name="cm-overlay"] {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000000;
+  opacity: 0;
+  transition: all 400ms;
+}
+
+[data-name="cm-overlay"][data-visible="true"] {
+  display: block;
+}
+
+[data-name="cm-overlay"].visible {
+  opacity: 0.6;
+}
+
+[data-name="cm-dialog-wrapper"] {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 400ms;
+  pointer-events: none;
+}
+
+[data-name="cm-dialog-wrapper"][data-visible="true"] {
+  display: flex;
+}
+
+[data-name="cm-dialog-wrapper"].visible {
+  opacity: 1;
+}
+
+[data-name="cm-dialog"] {
+  max-width: calc(100% - 32px);
+  max-height: calc(100% - 64px);
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+  pointer-events: all;
+}
+
+[data-name="cm-dialog"] header,
+[data-name="cm-dialog"] main,
+[data-name="cm-dialog"] [data-name="cm-dialog-footer"] {
+  padding: 16px;
+}
+
+[data-name="cm-dialog"] header {
+  border-bottom: 1px solid #a5aab5;
+  text-align: center;
+  font-family: futura-bold;
+}
+
+[data-name="cm-dialog"] main {
+  overflow: auto;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+[data-name="cm-dialog"] [data-name="cm-dialog-footer"] {
+  border-top: 1px solid #a5aab5;
+  text-align: right;
+}
+
+[data-name="cm-dialog"] nav {
+  display: flex;
+  margin: 12px -16px -12px -16px;
+}
+
+[data-name="cm-dialog"] nav button {
+  flex: 1;
+  padding: 8px;
+  margin: 0;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #a5aab5;
+  background: transparent;
+  transition: color 200ms;
+}
+
+[data-name="cm-dialog"] nav button[tab-active] {
+  border-bottom: 2px solid #f39200;
+  padding-bottom: 7px;
+  color: #005ca9;
+}
+
+[data-name="cm-dialog"] main [tab-content] {
+  display: none;
+}
+
+[data-name="cm-dialog"] main [tab-content][active] {
+  display: block;
+}
+
+[data-name="cm-dialog"] header.cm-dialog-header-with-nav {
+  border: 0;
+}

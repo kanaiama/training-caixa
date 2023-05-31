@@ -1,0 +1,6 @@
+.bg-clientInfo {
+	background-image: url("../img/background-home.jpg");
+	background-repeat: repeat-x;
+	width: 500px;
+	height: 200px;
+}

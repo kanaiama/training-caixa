@@ -1,0 +1,229 @@
+/**
+* @project Caixa Econômica Federal | Internet Banking
+* @project URI http://www.caixa.gov.br/
+* @version 2013
+* @author CPM Braxis Capgemini
+* @author URI http://www.cpmbraxis.com
+* @copyright 2013 CPM Braxis Capgemini
+*/
+
+
+/* -------------------------------------------------- 
+    Table of Contents
+-----------------------------------------------------
+:: Variables
+:: Boxes
+
+
+/*	--------------------------------------------------
+	:: Variables
+	-------------------------------------------------- */
+	
+	$size2: 12px;
+	$size3: 15px;
+	$colorGrayDark: #4F4F4F; 
+	$color2: #ffffff;
+	$borderLeftWidth:7px;
+	$borderLeftHeight:8px;
+	$borderFloatRight:right;
+	$borderMarginRight:-19px -18px 0 18px;
+	$backgroundStandard: url(../img/imgLogin.png);
+	
+	@mixin borderBlocRigth {
+		height:$borderLeftHeight;
+		width:$borderLeftWidth; 
+		float:$borderFloatRight;
+		margin:$borderMarginRight;
+	}
+	
+		@mixin borderBlocBottomRigth {
+		height:$borderLeftHeight;
+		width:$borderLeftWidth; 
+		margin:$borderMarginRight;
+	}
+	
+	
+
+/*	--------------------------------------------------
+	:: Boxes
+	-------------------------------------------------- */
+
+.blocLoginStandard {
+		position:relative;
+		width:236px;
+		height:132px;
+		padding:17px;
+		margin:19px 0 -3px 53px;
+		float:right;;
+}
+
+.borderBlocTopRight {
+	@include borderBlocRigth;
+	background: $backgroundStandard 0 -658px no-repeat;
+}
+
+	 		.borderBlocBottomRight {
+	 		@include borderBlocBottomRigth;
+	 		background: $backgroundStandard -13px -658px;
+			margin: 37px -38px 0 246px;
+	 	}
+	 	
+/* Border Grey Light  ---------- */	 
+	 
+			.borderTopRightGreyLight {
+			  height: 6px;
+			  width: 6px;
+			  float: right;
+			  margin: -10px -27px 0 4px;
+			  background: url(../img/imgLogin.png) -90px -660px;
+			}
+			
+			.borderTopLeftGreyLight {
+			  height: 6px;
+			  width: 6px;
+			  float: left;
+			  margin: -10px 0 0 -10px;
+			  background: url(../img/imgLogin.png) -98px -660px;
+			}
+			
+			.borderBottomLeftGreyLight{
+			  height: 6px;
+			  width: 6px;
+			  float: left;
+			  margin: -10px 0 0 -10px;
+			  background: url(../img/imgLogin.png) -114px -660px;
+			  margin: 12px 0 0 -10px;
+			}
+			
+			.borderBottomRightGreyLight{
+			  height: 6px;
+			  width: 6px;
+			  float: right;
+			  margin: 12px -13px 0 8px;
+			  background: url(../img/imgLogin.png) -106px -660px;
+			}
+				 	
+
+
+/* Menu options ---------- */
+	.menuLoginHome {
+		float:left; 
+		margin: 10px 0 30px 0;
+		width: 901px;
+		
+		.menuLogin {
+			float:left;
+			clear:both;
+			margin:0px 0 20px 0;
+			padding-top:20px;
+		    width: 250px;
+		
+		.menu ul {
+		cursor: pointer;
+	}
+	
+	.menu {
+	    cursor: pointer;
+	    color: #000;
+	    line-height: 40px;
+	    text-align: left;
+	    font-weight: bold;
+	    font-size: 12px;
+	    padding-left: 50px;
+	}
+	
+	.menu:hover {
+	    cursor: pointer;
+	    line-height: 40px;
+	    text-align: left;
+	    color: $color2;
+	    font-weight: bold;
+	    padding-left: 50px;
+	}
+	
+	.selected {
+	    cursor: pointer;
+	    line-height: 40px;
+	    text-align: left;
+	    color: $color2;
+	    font-weight: bold;
+	    font-size: 12px;
+	    padding-left: 50px;
+	}
+		}
+	
+	.borderContMenuTopLeft {
+		float:left;
+		background:	$backgroundStandard -241px -3px;
+		width:9px;
+		height:20px;
+		margin:0 0 0 -9px;
+	}
+	
+	.borderContMenuBottomLeft {
+		float:left;
+		background:	$backgroundStandard -241px -223px;
+		width:9px;
+		height:10px;
+		margin:-10px 0 0 -9px;
+	}
+	
+	.borderContMenuTopRight {
+		position:absolute;
+		top:252px;
+		left:1074px;
+		background:	$backgroundStandard 0px -10px;
+		width:9px;
+		height:13px;
+		z-index:1000;
+	}
+	
+	.borderContMenuBottomRight {
+		position:absolute;
+		top:482px;
+		left:1074px;
+		background:	$backgroundStandard 0px -223px;
+		width:9px;
+		height:11px;
+		margin: -11px 0 0 0;
+	}
+}
+
+	
+
+/* Menu content ---------- */
+
+	#content1 {
+		display:block;
+	}
+	
+	.boxContent {
+		position: relative;
+	    padding: 20px 20px 20px 30px;
+		background: #E7E7E7;
+		height: 190px;
+		width: 600px;
+		display: none;
+		margin-left:241px;
+		
+		p {
+			font: {
+				size:12px;
+				weight:bold;
+			}
+			color: #4F4F4F;
+			padding-right:20px;
+			text-align:justify;
+		}
+		
+		.contentTitle { 
+			color:$colorGrayDark;
+			font-weight:bold;
+			margin-bottom:30px;
+			font-size:$size3;
+		}
+		
+		.knowMorelink {
+			cursor: pointer;
+		}
+	}

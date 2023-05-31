@@ -1,0 +1,19 @@
+.cm-body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #f5f5f5;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  font-family: futura-book;
+  color: #48586c;
+}
+
+.cm-body > *:not(.cm-header):not(:first-child) {
+  margin-top: 32px;
+}

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "futura-bold";
+  font-weight: bold;
+  src: url("./futuraBold/futuraBold.eot");
+  src: url("./futuraBold/futuraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./futuraBold/futuraBold.woff") format("woff"),
+    url("./futuraBold/futuraBold.ttf") format("truetype"),
+    url("./futuraBold/futuraBold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "futura-book";
+  font-weight: normal;
+  letter-spacing: 2px;
+  src: url("./futuraBook/futuraBook.eot");
+  src: url("./futuraBook/futuraBook.eot?#iefix")
+      format("embedded-opentype"),
+    url("./futuraBook/futuraBook.woff") format("woff"),
+    url("./futuraBook/futuraBook.ttf") format("truetype"),
+    url("./futuraBook/futuraBook.svg") format("svg");
+}
+
+@font-face {
+    font-family: 'futura-lt';
+    src: url('/statics-core/fonts/futuraLT/FuturaLT.eot');
+    src: url('/statics-core/fonts/futuraLT/FuturaLT.eot?#iefix') format('embedded-opentype'),
+        url('/statics-core/fonts/futuraLT/FuturaLT.woff2') format('woff2'),
+        url('/statics-core/fonts/futuraLT/FuturaLT.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

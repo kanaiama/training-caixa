@@ -1,0 +1,103 @@
+.cards {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100px;
+}
+
+.cards:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cards-container {
+  text-align: right;
+}
+
+.card-university {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 16px;
+  text-align: left;
+  margin: 12px 18px 12px 14px;
+  background: #FFFFFF;
+  background-image: url('../img/bgCardUniversity.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  width: 84%;
+  min-height: 82px;
+}
+
+.card-university p {
+  margin-bottom: 8px;
+}
+
+.card-university .titulo {
+  color: #005CA9;
+  text-align: left;
+  font-family: 'futura-bold';
+  padding-right: 52px;
+  font-size: medium;
+}
+
+.card-valor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 16px 16px 8px;
+
+  width: 85%;
+  background: #FFFFFF;
+
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 16px;
+  font-size: small;
+}
+
+.card-valor .icon {
+  color: #4E6178;
+  width: 100%;
+}
+
+.card-valor .corpo {
+  padding: 0% 6%;
+  width: 92%;
+}
+
+.card-valor .icon i {
+  float: right;
+  font-size: medium;
+}
+
+.card-valor input {
+  color: #0077DB !important;
+  border: 0 !important;
+  border-bottom: 1px solid #3A4859 !important;
+  font-weight: normal !important;
+}
+
+.card-valor .titulo {
+  color: #3A4859;
+  font-family: 'futura-bold';
+  font-size: medium;
+  border-left: 4px solid #F39200;
+  min-height: 18px;
+  margin: 0px;
+  padding-left: 28px;
+}
+
+.card-valor table {
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .card-valor {
+    width: 38%;
+  }
+}

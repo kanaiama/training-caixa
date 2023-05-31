@@ -1,0 +1,5 @@
+/*Arquivo CSS para Mobile*/
+
+/*Arquivo CSS para Desktop*/
+@import url('bootstrap_desktop.css') only screen and (min-width:740px);
+

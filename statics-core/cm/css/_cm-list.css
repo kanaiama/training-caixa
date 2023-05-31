@@ -1,0 +1,16 @@
+.cm-ol {
+    margin: 0;
+    margin-left: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.cm-ol li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cm-ol li:not(:last-child) {
+    margin-bottom: 8px;
+}

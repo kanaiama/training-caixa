@@ -1,0 +1,15 @@
+cadastroConteudo(
+       {'cadastro_txt_introducao':'TESTE Escolha o tipo de servi\u00E7o que deseja utilizar ao acessar o Internet Banking da CAIXA',
+        'cadastro_txt_usuarioConta':'TESTE Para quem tem conta na CAIXA',
+        'cadastro_txt_usuarioSemConta':'TESTE Para quem n\u00E3o tem conta na CAIXA',
+        'cadastro_img_banner':'../statics-core/img/bannerAside.png',
+        'cadastro_saibaMais_titulo':'TESTE O QUE VOC\u00CA PRECISA SABER',
+        'cadastro_saibaMais_resumo':'TESTE Com o Internet Banking CAIXA voc\u00EA acessa os Servi\u00E7os ao Cidad\u00E3o para consultar extratos e cr\u00E9ditos complementares do FGTS, e ainda pode acompanhar as faturas abertas e fechadas do seu cart\u00E3o de cr\u00E9dito.',
+        'cadastro_saibaMais_objetivo':'TESTE Permitir acesso, pelo Internet Banking Caixa, \u00E0conta corrente, conta investimento ou poupan\u00E7a, tanto para correntistas Pessoa F\u00EDsica e Pessoa Jur\u00EDdica quanto GOV.',
+        'cadastro_saibaMais_horarioAtendimento':'TESTE Todos os dias da semana, durante 24 horas.',
+        'cadastro_saibaMais_condicoes':'TESTE \u00C9 necess\u00E1rio possuir a senha da conta (senha de quatro d\u00EDgitos), para o cadastramento da senha de acesso.',
+        'cadastro_saibaMais_descricao':'TESTE Cadastramento de usu\u00E1rio(s), conta(s) e senha(s) internet, que possibilitam o acesso ao Internet Banking Caixa.',
+        'cadastro_saibaMais_observacoes':'TESTE Voc\u00EA pode acessar contas de Pessoa F\u00EDsica, Pessoa Jur\u00EDdica e GOV no mesmo login.',
+        'cadastro_saibaMais_custo':'TESTE Gratuito.',
+        }
+)

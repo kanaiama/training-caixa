@@ -1,0 +1,437 @@
+/**
+* @project Caixa Econômica Federal | Internet Banking
+* @project URI http://www.caixa.gov.br/
+* @version 2013
+* @package layout
+* @author Capgemini
+* @author URI http://www.cpmbraxis.com
+* @copyright 2013 Capgemini
+*/
+ 
+   
+/* -------------------------------------------------- 
+    Table of Contents
+-----------------------------------------------------
+:: Variables
+:: Button
+:: Input 
+
+
+/*	--------------------------------------------------
+	:: Variables
+	-------------------------------------------------- */
+
+	$colorWhite:#ffffff;
+	$size1: 11px;
+	$fontUppercase:uppercase;
+	$btnFloatLeft:left;
+	$btnMarginLeft:15px;
+	$btnFontBold:bold;
+	$btnTxtShadow:none;
+	$btnPosition:relative;
+	$btnOverflow:visible;
+	$btnHeight:36px;
+	$bordersTables: url(../img/bordersTable.png);
+	$backgroundMessageBox: url(../img/ico_msg_check.gif);
+	
+
+	@mixin button {
+		position:$btnPosition; 
+		float:$btnFloatLeft; 
+		height:$btnHeight;
+		margin-left:$btnMarginLeft; 
+		font-size:$size1;
+		font-weight:$btnFontBold; 
+		color:$colorWhite; 
+		text-transform:$fontUppercase; 
+		text-shadow:$btnTxtShadow;
+		overflow:$btnOverflow;
+		
+	}
+	
+	@mixin fontFace750em {
+		font:0.750em Arial, Helvetica, sans-serif; 
+	}
+	
+	.buttonClean {
+		margin-left: 0px !important
+	}
+/*	--------------------------------------------------
+	:: Button
+	-------------------------------------------------- */
+
+/* Button Orange Background Write ---------- */
+
+.buttonOrange{
+		@include button;
+		width: auto;
+		background: url(../img/imgButtonOrange.png) repeat; 
+		padding: 0 15px 0 15px;
+		
+			&:hover, &:active {
+				background: url(../img/imgButtonOrangeAhover.png) repeat;
+			}
+			
+}
+
+/* Button Blue Background Write ---------- */
+
+.buttonBlue{
+		@include button;
+		width: auto;
+		padding: 0 15px 0 15px;
+		background: url(../img/imgButtonBlue.png) repeat; 
+		
+			&:hover, &:active {
+				background: url(../img/imgButtonBlueAhover.png) repeat;
+			}
+			
+}
+
+	.iconInfoSucess {
+		float: left;
+		margin: 0 10px 0 10px; 
+		width:100%;
+		
+		& span {
+			background: $backgroundMessageBox 0px 3px no-repeat;
+			width:36px;
+			height:40px;
+			position:absolute;
+		}	
+	}		
+	
+
+/*	--------------------------------------------------
+    :: Input
+	-------------------------------------------------- */
+form label{
+	float: left;
+	color: #003576;
+	font-size:0.875em;
+	font-weight: bold;
+	width:160px;
+}
+form .big {
+	width: 444px;
+	height: 18px;
+	float: left;
+	position: relative;
+	z-index: 9999;
+	margin: 0;
+	background:none !important;
+}
+form label.big {
+	  width: auto;
+	  max-width: 385px;
+	  margin-right: 10px;
+}
+form .radioGroup label{
+	float: none;
+	color: #003576;
+	font-size:0.875em;
+	font-weight: bold;
+	margin-left:10px;
+	width: auto;
+}
+form input[type="text"],  input[type="password"], input[type="file"]{
+	display:inline; 
+	float:left; 
+	width:auto; 
+	font-size:1.400em; 
+	font-family:inherit; 
+	font-weight:bold; 
+	color:#303030; 
+	background:url(../img/bkgInputRight.png) no-repeat right;
+	padding: 0px 8px 0px 8px;
+	height: 32px;
+	margin-right:-4px;
+	position:relative;
+	line-height:30px;
+}
+form .searchbox input[type="text"] {
+	display: inline;
+	float: left;
+	padding: 0 0 0 9px;
+	width: 90%;
+	font-size: 2.000em;
+	font-family: inherit;
+	font-weight: bold;
+	color: #9c9c9c !important;
+	vertical-align: middle;
+	line-height: 1.1em;
+	position: relative;
+	z-index: 2;
+	margin-left: 8px;
+	background: url(../img/search-input-right.jpg) no-repeat right; 
+	height:45px
+}
+
+/* Form Input ---------- */
+
+form .relativeInput {
+	position:relative;
+	z-index:2;
+	float:left;
+	margin:-12px 0 10px 10px;
+	background:url(../img/imgInputWhite.png); 
+	width:auto;
+	height:32px;
+}
+form .relativeInputDays {
+position: relative;
+z-index: 2;
+float: left;
+margin: 10px 0 10px 10px;
+background: url(../img/imgInputWhite.png);
+width: auto;
+height: 32px;
+}
+form input[type="text"].grey{
+	display:inline; 
+	float:left; 
+	width:auto; 
+	font-size:0.875em;
+	font-family:inherit; 
+	font-weight:bold; 
+	color:#303030; 
+	padding: 0px 8px 0px 8px;
+	height: 33px;
+	margin-right:-4px;
+	position:relative;
+	background:url(../img/bkgInputRightGrey.png) no-repeat right;
+}
+form .relativeInputGrey{
+	position:relative;
+	z-index:2;
+	float:left;
+	margin:-9px 10px 10px 0;
+	background:url(../img/bkgInputLeftGreyNew.png) no-repeat left;
+	width:auto;
+	height:33px;
+}
+form input[type="text"], form input[type="password"], form input[type="file"]{
+	display:inline; 
+	float:left; 
+	width:auto; 
+	font-size:1.400em; 
+	font-family:inherit; 
+	font-weight:bold; 
+	color:#303030; 
+	background:url(../img/bkgInputRight.png) no-repeat right;
+	padding:0 10px 0 10px;
+	height: 32px;
+	position:relative;
+}
+form input[type="text"].days {
+display: inline;
+float: left;
+width: 40px;
+font-size: 1.400em;
+font-family: inherit;
+font-weight: bold;
+color: #303030;
+background: url(../img/bkgInputRight.png) no-repeat right;
+padding: 0 10px 0 10px;
+height: 32px;
+position: relative;
+}
+form input[type="text"].input-date { 
+	font: 14px Arial, Helvetica;
+	font-weight: bold;
+	color: #303030;  
+	vertical-align: middle; 
+	line-height: 1.1em;
+	width:75px;
+	z-index: -1;
+}
+
+form input[type="text"]:disabled {
+	border:none;
+	width:auto;
+}
+
+form input[type="text"].input-date:disabled {
+	background: #eeeeee;
+	border:none;
+	width:auto;
+	opacity:0.7;
+}
+.greyBox label{
+	color: #4f4f4f;
+}
+
+form textarea{
+	display:inline; 
+	float:left; 
+	width:auto; 
+	padding:7px 9px; 
+	font-size:1.400em; 
+	font-family:inherit; 
+	font-weight:bold; 
+	color:#303030; 
+	vertical-align:middle;
+	line-height:1.1em;
+	border-style:solid !important; 
+	border-width:1px !important; 
+	border-color:#808080 #c4c4c4 #e3e3e3 #c4c4c4; 
+	background:#e6e6e6;
+	margin: 0px 6px 6px 0px;
+	height: auto;
+}
+
+		.cadCompApel{			
+			.tables  {
+			width:100%;
+			float:left;
+			border-collapse: collapse;
+			padding: 0px;
+			border: none;
+			font-family: Arial, Helvetica;
+			position:relative;
+			margin:0px 0px 10px 0px;
+			}
+			tbody.blue tr.alternateRow td {
+				background: #CBDBEE;
+				border: none;
+			}
+			tbody.white tr.alternateRow td {
+				background: #ffffff;
+				border: none;
+			}
+			tbody td {
+				background-color: #D6E1EE;
+				line-height:44px;
+				padding:0;
+			}
+			tbody.white td {
+				background: #e7e7e7;
+				line-height:44px;
+				padding-left:16px; 
+			} 
+			th {
+				font-size:12px;
+				font-weight:bold; 
+				color:#4f4f4f;
+				line-height: 25px;
+				}
+		  .txtLeft {
+				text-align:left;
+				padding-left:16px;
+				@include fontFace750em;
+				line-height:44px;
+				font-weight: normal;
+				color:#303030;
+				}
+			}
+
+	/*	----BORDERS TABLES------ */	
+		#cadMaq .borderLeft {
+			background-image:url(../img/tdBorderLeft.png);
+			width:8px;
+			height:44px;
+			background-repeat:no-repeat;
+		}
+		#cadMaq .borderRight {
+			background-image:url(../img/tdBorderRight.png);
+			width:8px;
+			height:44px;
+			text-align: right;
+			background-position:right;
+			background-repeat:no-repeat;
+		}
+		.divBorderBottom {
+			background-color:#FFFFFF;
+			line-height:6px;
+			position:relative;
+			background-repeat:no-repeat;
+			width:100%;
+			border:none;
+		}
+		.borderBottomLeft {
+			height: 6px;
+			width: 6px;
+			float: left; 
+			position:relative;
+			background: $bordersTables no-repeat 0px 0px;
+			margin:-6px 0px 0px 0px;
+		}
+		.borderBottomRight {
+			height: 6px;
+			width: 6px;
+			float: right;
+			position:relative;
+			background: $bordersTables no-repeat -7px 0px;
+			margin:-6px 0px 0px 0px;
+		}
+		.tdBottom {
+			border-Bottom:1px solid #cccccc;
+			width:100%;
+			height:1px;
+			padding:0px;
+			margin:0;
+			background:#fff;
+			background-image:none;
+		}
+		.divBorderTop {
+			width:100%;
+			line-height:6px;
+			margin-bottom:0px;
+			position:relative;
+			background-repeat:no-repeat;
+			border:none;
+		}
+		.borderTopLeft {
+			height: 6px;
+			width: 6px;
+			float: left;
+			position:relative; 
+			background: $bordersTables no-repeat -14px 0px;
+			margin:0;
+		}
+		.borderTopRight {
+			height: 6px;
+			width: 6px;
+			float: right;
+			position:relative; 
+			background: $bordersTables no-repeat -21px 0px;
+			margin: 0;
+		}	
+		
+
+/*	--------------------------------------------------
+	:: Media Queries
+	-------------------------------------------------- */	
+/* 800X600 ---------- */
+	@media all and (max-width:840px) and (min-width:100px){
+
+	.buttonBlue{
+		margin:0 15px 10px 0;
+		float:right
+	}	
+ 
+	.buttonOrange{
+		margin-right: 15px;
+	}	
+}
+
+	@media all and (max-width:940px) and (min-width:841px){
+
+	.buttonBlue{
+		margin:0 15px 10px 0;
+	}
+	
+	.buttonOrange{
+		margin-right: 15px;
+	}	
+	
+}
+
+/* Tablet ---------- */	
+
+	@media all and (max-width:800px) and (orientation:portrait){
+	
+	.buttonOrange{
+		margin-right: 15px;	
+	}
+}		

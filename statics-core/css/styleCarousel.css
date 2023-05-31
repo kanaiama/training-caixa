@@ -1,0 +1,301 @@
+/**
+* @project Caixa Economica Federal | Internet Banking
+* @project URI http://www.caixa.gov.br/
+* @version 2013
+* @author Capgemini
+* @author URI http://www.cpmbraxis.com
+* @copyright 2013 Capgemini
+*/
+/*	--------------------------------------------------
+	:: Variables
+	-------------------------------------------------- */
+/* line 30, ../sass/styleCarousel.scss */
+#compCarousel {
+  float: left;
+  width: 70%;
+  margin: 15px 0px 15px 40px;
+}
+/* line 35, ../sass/styleCarousel.scss */
+#compCarousel #row1 {
+  margin: 0px 0px 26px 0;
+}
+/* line 39, ../sass/styleCarousel.scss */
+#compCarousel #row2 {
+  margin: 0px 0px 26px 0;
+}
+/* line 43, ../sass/styleCarousel.scss */
+#compCarousel .link {
+  position: relative;
+  display: none;
+  width: 194%;
+  top: -26px;
+  left: -36%;
+  float: left;
+  background-color: #FFF;
+  border-top: solid #E4E4E4 1px;
+  border-bottom: solid #E4E4E4 1px;
+  margin: 0px 0px 0px 20px;
+  padding: 22px 10px;
+  z-index: 4;
+}
+/* line 59, ../sass/styleCarousel.scss */
+#compCarousel .link .arrowContent {
+  position: absolute;
+  width: 15px;
+  height: 8px;
+  top: -8px;
+  left: 20.2%;
+  background: url(../img/arrowContent.png) no-repeat;
+}
+/* line 68, ../sass/styleCarousel.scss */
+#compCarousel .link .content {
+  width: 64%;
+  margin: 0 auto;
+  height: 100%;
+}
+/* line 73, ../sass/styleCarousel.scss */
+#compCarousel .link .content .borderContLeft {
+  float: left;
+  height: 100%;
+  border-left: 1px solid #E3E6EA;
+  width: 0px;
+}
+/* line 80, ../sass/styleCarousel.scss */
+#compCarousel .link .content .borderContRight {
+  float: right;
+  height: 100%;
+  border-right: 1px solid #F4F5F7;
+  width: 0px;
+}
+/* line 87, ../sass/styleCarousel.scss */
+#compCarousel .link .content .spacer {
+  float: left;
+  width: 17.8%;
+  padding: 0px 5px;
+}
+/* line 92, ../sass/styleCarousel.scss */
+#compCarousel .link .content .spacer .title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #024992;
+}
+/* line 98, ../sass/styleCarousel.scss */
+#compCarousel .link .content .spacer ol {
+  float: left;
+  width: 100%;
+  margin: 10px 0px 15px 0px;
+}
+/* line 103, ../sass/styleCarousel.scss */
+#compCarousel .link .content .spacer ol li {
+  display: block;
+  float: none;
+  height: 100%;
+  width: 100%;
+  line-height: 20px;
+  text-align: left;
+  font-size: 12px;
+  color: #002F51;
+  text-transform: none;
+}
+/* line 114, ../sass/styleCarousel.scss */
+#compCarousel .link .content .spacer ol li a {
+  color: #002F51;
+  font-size: 12px;
+}
+/* line 118, ../sass/styleCarousel.scss */
+#compCarousel .link .content .spacer ol li a:hover {
+  text-decoration: underline;
+  color: #0059BE;
+}
+/* line 129, ../sass/styleCarousel.scss */
+#compCarousel a, #compCarousel a:link {
+  color: #003576;
+  text-decoration: none;
+  line-height: inherit;
+}
+/* line 139, ../sass/styleCarousel.scss */
+#compCarousel ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  cursor: pointer;
+}
+/* line 147, ../sass/styleCarousel.scss */
+#compCarousel li {
+  float: left;
+  margin: 0px 4px 0px 4px;
+  color: #003576;
+  width: 106px;
+  height: 117px;
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 164, ../sass/styleCarousel.scss */
+#compCarousel li span {
+  float: left;
+  width: 100%;
+}
+/* line 170, ../sass/styleCarousel.scss */
+#compCarousel li:hover {
+  color: #e9821b;
+  text-decoration: none;
+}
+#compCarousel li span.disable {
+  	color: #9D9D9D;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+}
+/* line 175, ../sass/styleCarousel.scss */
+#compCarousel button.myAccount {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -113px -85px;
+}
+/* line 180, ../sass/styleCarousel.scss */
+#compCarousel button.services {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -455px -85px;
+}
+/* line 185, ../sass/styleCarousel.scss */
+#compCarousel button.payment {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -200px -85px;
+}
+/* line 190, ../sass/styleCarousel.scss */
+#compCarousel button.lottery {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -30px -85px;
+}
+/* line 195, ../sass/styleCarousel.scss */
+#compCarousel button.transference {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -540px -85px;
+}
+/* line 200, ../sass/styleCarousel.scss */
+#compCarousel button.insurance {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -370px -85px;
+}
+/* line 205, ../sass/styleCarousel.scss */
+#compCarousel button.cards {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -285px 0px;
+}
+/* line 210, ../sass/styleCarousel.scss */
+#compCarousel button.socialSecurity {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -285px -85px;
+}
+/* line 215, ../sass/styleCarousel.scss */
+#compCarousel button.loans {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -455px 0px;
+}
+/* line 220, ../sass/styleCarousel.scss */
+#compCarousel button.capitalization {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -200px 0px;
+}
+/* line 225, ../sass/styleCarousel.scss */
+#compCarousel button.investments {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -625px -85px;
+}
+/* line 230, ../sass/styleCarousel.scss */
+#compCarousel button.mobileCaixa {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -30px 0px;
+}
+/* line 235, ../sass/styleCarousel.scss */
+#compCarousel button.habitation {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -625px 0px;
+}
+/* line 240, ../sass/styleCarousel.scss */
+#compCarousel button.consortium {
+  width: 85px;
+  height: 85px;
+  background: url(../img/imgCarousel.png) no-repeat -370px 0px;
+}
+/* line 246, ../sass/styleCarousel.scss */
+#compCarousel #prev {
+  position: absolute;
+  top: 120px;
+  width: 30px;
+  height: 45px;
+  left: 0;
+  background: url(../img/imgCarousel.png) no-repeat 0px 0px;
+}
+/* line 252, ../sass/styleCarousel.scss */
+#compCarousel #next {
+  position: absolute;
+  top: 120px;
+  width: 30px;
+  height: 45px;
+  right: 210px;
+  background: url(../img/imgCarousel.png) no-repeat 0px -95px;
+}
+
+/* Tablet ---------- */
+@media screen and (max-width: 800px) and (orientation: portrait) {
+  /* line 264, ../sass/styleCarousel.scss */
+  #compCarousel {
+    margin: 0 auto 0 15%;
+    width: 79%;
+  }
+  /* line 268, ../sass/styleCarousel.scss */
+  #compCarousel .link {
+    width: 138%;
+  }
+  /* line 271, ../sass/styleCarousel.scss */
+  #compCarousel .link .content {
+    width: 64%;
+    margin: 0px auto 0px 25%;
+  }
+  /* line 276, ../sass/styleCarousel.scss */
+  #compCarousel .link .arrowContent {
+    left: 28.5%;
+  }
+  /* line 281, ../sass/styleCarousel.scss */
+  #compCarousel #prev {
+    left: 7%;
+  }
+  /* line 285, ../sass/styleCarousel.scss */
+  #compCarousel #next {
+    right: 7%;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  /* line 293, ../sass/styleCarousel.scss */
+  #compCarousel .link {
+    width: 170%;
+  }
+  /* line 296, ../sass/styleCarousel.scss */
+  #compCarousel .link .content {
+    margin: 0px auto 0px 20%;
+  }
+  /* line 300, ../sass/styleCarousel.scss */
+  #compCarousel .link .arrowContent {
+    left: 23.2%;
+  }
+}
