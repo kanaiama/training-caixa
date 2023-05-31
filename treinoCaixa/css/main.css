@@ -27,9 +27,35 @@ li {
     font-weight: normal;
 }
 
+.exit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .exit span {
     color: #e2e2e2;
     font-weight: normal;
 }
 
 /* carrossel */
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+
+}
+
+.seta img {
+  width: 20px;
+  height: 30px;
+}
