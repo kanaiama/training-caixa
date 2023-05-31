@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+li {
+    color: #e2e2e2;
+    font-weight: normal;
+}
+
+.aditional {
+    color: #F2F2F2;
+    font-weight: bold;
+}
+
+.saldo span {
+    color: #e2e2e2;
+    font-weight: normal;
+}
+
+.exit span {
+    color: #e2e2e2;
+    font-weight: normal;
+}
+
+/* carrossel */

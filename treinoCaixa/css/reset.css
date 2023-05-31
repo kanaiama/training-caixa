@@ -1,17 +1,31 @@
 @font-face {
-    font-family: 'futura-lt';
+    font-family: 'Futura LT';
     src: url('/fonts/futuraLT/FuturaLT.eot');
     src: url('/fonts/futuraLT/FuturaLT.eot?#iefix') format('embedded-opentype'),
         url('/fonts/futuraLT/FuturaLT.woff2') format('woff2'),
-        url('/fonts/futuraLT/FuturaLT.woff') format('woff');
+        url('/fonts/futuraLT/FuturaLT.woff') format('woff'),
+        url('/fonts/futuraLT/FuturaLT.ttf') format('truetype'),
+        url('/fonts/futuraLT/FuturaLT.svg#FuturaLT-Light') format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura LT Book';
+    src: url('/fonts/futuraLT/FuturaLT-BoldOblique.eot');
+    src: url('/fonts/futuraLT/FuturaLT-BoldOblique.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/futuraLT/FuturaLT-BoldOblique.woff2') format('woff2'),
+        url('/fonts/futuraLT/FuturaLT-BoldOblique.woff') format('woff'),
+        url('/fonts/futuraLT/FuturaLT-BoldOblique.ttf') format('truetype'),
+        url('/fonts/futuraLT/FuturaLT-BoldOblique.svg#FuturaLT-BoldOblique') format('svg');
+    font-weight: bold;
+    font-style: italic;
 }
 
 *{
     margin: 0;
 }
-
 body {
-    font-family: "FuturaLT", futura-lt;
+    font-family: 'Futura LT', sans-serif;
+    font-weight: normal;
 }
