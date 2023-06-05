@@ -1,16 +1,18 @@
 header {
-  position: fixed;
   width: 100%;
   padding: 10px 20px;
   top: 0;
-  z-index: 999;
-  background: #277EB6;
+  background: #2A6FA8;
 
 }
 
 .topo {
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 30px;
+  height: 6vh;
+
 }
 
 .title {
@@ -22,7 +24,16 @@ header {
 
 .title p {
   display: flex;
+  align-items: center;
   gap: 7px;
+  font-size: 13px;
+}
+
+.title span {
+   display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;  
 }
 
 .hamburguer {
@@ -149,13 +160,13 @@ a {
   }
 
   header .hamburguer>img {
+    margin-top: 4px;
     width: 30px;
+    height: 40px;
   }
 
   header .container>div>.navbar>.logo {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
     width: 100%;
   }
 
@@ -201,4 +212,133 @@ a {
   .credito p {
     color: #4C556C;
   }
+}
+
+
+/* BANNER */
+
+
+.container-convenio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tipoConvenio {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #277EB6;
+  width: 100%;
+  height: 10vh;
+}
+
+.tipoConvenio p {
+  font-size: 18px;
+  color: #FFFFFF;
+  font-weight: inherit;
+}
+
+.subtitulo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 8vh;
+  background: #F2F7F8;
+}
+
+.subtitulo p {
+  font-weight: bold;
+  color: #2E484D;
+}
+
+/* CONTEUDO BANNER */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.caixa1 {
+  height: 14vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EFF5F6;
+
+}
+
+.caixa {
+  height: 18vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EFF5F6;
+
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content span {
+  font-size: 16px;
+  color: #005DA8;
+  font-weight: bold;
+}
+
+.content img {
+  width: 32px;
+  height: 21.73px;
+}
+
+.arrowRight {
+  height: 13px;
+  width: 10px;
+  margin-left: 8px;
+}
+
+.content2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.content2 span {
+  font-size: 16px;
+  color: #005DA8;
+  font-weight: bold;
+}
+
+.content2 img {
+  width: 32px;
+  height: 21.73px;
+}
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.text-content p {
+  font-size: 13px;
+  color: #48586C;
+}
+
+.arrowRight2 {
+  margin-right: 20px;
+}
+
+.arrowRight2 img {
+    height: 13px;
+  width: 10px;
 }

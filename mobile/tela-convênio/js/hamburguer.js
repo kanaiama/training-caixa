@@ -11,3 +11,6 @@ hamburguerButton.forEach((element) => {
   });
 });
 
+window.addEventListener("scroll",()=>{
+  navBar.classList.toggle("active",window.scrollY>10);
+})
