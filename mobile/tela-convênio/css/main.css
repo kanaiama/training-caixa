@@ -101,9 +101,11 @@ a {
     justify-content: center;
     padding: 20px;
     height: 7vh;
+    width: 100%;
     gap: 10px;
     margin-left: -20px;
     background: #F59300;
+    color: #FFFFFf;
   }
 
   header .container .navbar ul .liRestante {
@@ -114,9 +116,23 @@ a {
     margin-top: -9px;
   }
 
-  header .container .navbar ul .liRestante li{
+  header .container .navbar ul .liRestante li a{
     color: #005DA8;
     font-weight: bold;
+    font-size: 18px;
+  }
+
+  header .container .navbar ul .liRestante .contratar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header .container .navbar ul .liRestante .contratar img{
+    height: 23px;
+    width: 32px;
+    margin-top: -3px;
   }
 
 
