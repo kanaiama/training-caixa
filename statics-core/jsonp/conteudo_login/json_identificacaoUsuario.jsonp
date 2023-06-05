@@ -1,5 +1,0 @@
-identificacaoUsuarioConteudo(
-       {'identificacaoUsuario_txt_titulo':'TESTE As iniciais de seu nome s\u00E3o:',
-        'identificacaoUsuario_txt_descricao':'TESTE Prezado Cliente, clique nas letras acima se elas estiverem de acordo com as iniciais do seu nome. Caso contr\u00E1rio, para sua seguran\u00E7a, clique em Voltar e reinicia sua identifica\u00E7\u00E3o. *Este dado est\u00E1 de acordo com o registro de Cadastro de Pessoa F\u00EDsica da Receita Federal.'
-        }
-)
