@@ -93,7 +93,7 @@
 .botoes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 27px;
     justify-content: center;
     align-items: center;
 }
