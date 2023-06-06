@@ -79,11 +79,10 @@
 
 .question-link {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 7px;
     padding: 40px;
-    width: 100%;
 }
 
 .question-link a {
@@ -103,7 +102,31 @@
     background: #E8E9EC;
 }
 
+button {
+    width: 327px;
+    height: 40px;
+    left: calc(50% - 327px/2 - 1.5px);
+    bottom: 74px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);;
+}
+
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+    font-weight: bold;
+}
+
+button.enabled {
+    background-color: #F39200;
+    transition: background-color 0.2s ease-in;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btnVoltar {
+    box-sizing: border-box;
+    border: 1px solid #4C556C;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    color: #4C556C;
 }
