@@ -1,0 +1,109 @@
+.titulo-termo {
+    padding: 20px 20px;
+}
+
+.titulo-termo h1 {
+    font-size: 18px;
+    color: #0566A3;
+    letter-spacing: -0.02em;
+    line-height: 132%;
+}
+
+.content {
+    padding: 10px 20px;
+    display: flex;
+    gap: 1px;
+}
+
+.checkbox {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.checkbox label {
+    position: relative;
+    padding-left: 2.1em;
+    display: inline-block;
+}
+
+.checkbox label::before {
+    content: "";
+    display: inline-block;
+    height: 1.0em;
+    width: 1.0em;
+    background: #FFF;
+    margin-right: 0.5em;
+    border: 2px solid #277EB6;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+.checkbox label::after {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 0.65em;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    color: #FFF;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+.checkbox input:checked+label::before {
+    background: #ff7212;
+    border-color: #ff7212;
+}
+
+.checkbox input:checked+label::after {
+    opacity: 1;
+}
+
+.text-content p {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.question-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 40px;
+    width: 100%;
+}
+
+.question-link a {
+    font-size: 12.4px;
+    text-align: start;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: #E8E9EC;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
