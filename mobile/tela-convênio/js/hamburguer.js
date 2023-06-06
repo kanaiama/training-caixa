@@ -10,7 +10,3 @@ hamburguerButton.forEach((element) => {
     menuHamburguer.classList.toggle("active");
   });
 });
-
-window.addEventListener("scroll",()=>{
-  navBar.classList.toggle("active",window.scrollY>10);
-})
