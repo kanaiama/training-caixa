@@ -1,0 +1,128 @@
+h1 {
+    color: #005CA9;
+}
+
+.banner-identificacao {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-identificacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 0px 5px 0px;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    background-color: #e7e7e7;
+    padding: 10px;
+    width: 162px;
+    height: 40px;
+    font-size: 12px;
+    color: #5F758F;
+}
+
+/* .formNome {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #F7F5F5;
+    width: 162px;
+    height: 32px;
+    font-size: 12px;
+} */
+
+.banner-beneficio {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-beneficio {
+    display: flex;
+    gap: 14px;
+}
+
+.caixa-beneficio-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+
+.caixa-beneficio2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+.form2 {
+    display: flex;
+    align-items: center;
+    background-color: #e7e7e7;
+    padding: 10px;
+    width: 340px;
+    height: 40px;
+    font-size: 12px;
+    color: #5F758F;
+}
+
+.banner-pagamento {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-pagamento {
+    display: flex;
+    gap: 14px;
+}
+
+.caixa-pagamento-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.caixa-pagamento2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 5px;
+}
+
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+
+button {
+    width: 327px;
+    height: 40px;
+    left: calc(50% - 327px/2 - 1.5px);
+    bottom: 74px;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+    ;
+}
+
+.btnVoltar {
+    box-sizing: border-box;
+    border: 1px solid #4C556C;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+.btnVoltar a {
+    color: #4C556C;
+}

@@ -15,18 +15,7 @@
     gap: 1px;
 }
 
-.checkbox {
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .checkbox input {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
     position: absolute;
     width: 1px;
 }
@@ -34,12 +23,10 @@
 .checkbox label {
     position: relative;
     padding-left: 2.1em;
-    display: inline-block;
 }
 
 .checkbox label::before {
     content: "";
-    display: inline-block;
     height: 1.0em;
     width: 1.0em;
     background: #FFF;
