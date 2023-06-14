@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustache</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="node_modules/mustache/mustache.min.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="banner-title">
+            <h1>Por que devemos deixar <br> nossas casas verdes com <br> plantas</h1>
+            <p>O bem-estar pode ser promovido por meio do fornecimento de plantas de decoração 'vivas' - elas absorvem
+                produtos químicos <br>prejudiciais e regulam a umidade - e são uma maneira barata de adicionar cor
+                instantânea e glamour <br> aos interiores de casa.</p>
+        </div>
+        <div class="lista-produto" id="lista-produto"></div>
+
+        <script id="template-produto" type="x-tmpl-mustache">
+            <div class="form">
+                <div class="img-produto">
+                    {{#imgProdutos}}
+                        <img src="{{img}}" alt="">
+                    {{/imgProdutos}}
+                </div>
+                <div class="produtos">
+                    {{#produtos}}
+                    <ul>
+                        <div class="caixa">
+                            <li>
+                                <h1>{{preco}}</h1>
+                                <p>{{descricao}}</p>
+                            </li>
+                        </div>
+                    </ul>
+                    {{/produtos}}
+                </div>
+             </div>
+        </script>
+
+        <div class="botao">
+            <button>Saber mais</button>
+        </div>
+    </main>
+
+    <script src="js/produtos.js"></script>
+
+</body>
+
+</html>

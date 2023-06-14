@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.cssa">
+</head>
+<body>
+    <form id="form">
+        <input type="text" name="" id="fname" required>
+        <input type="text" name="" id="lname" required>
+        <input type="submit" value="Change Name">
+    </form>
+    
+    <script id="template" type="x-tmpl-mustache">
+        Meu primeiro nome é {{first}} e o meu último nome é {{last}}
+    </script>
+
+    <div id="result">
+
+    </div>
+
+</body>
+<script src="https://unpkg.com/mustache@latest"></script>
+<script>
+    let form = document.getElementById('form');    
+
+    form.addEventListener('submit', changeName);
+    function changeName(e) {
+ 
+        e.preventDefault();
+
+        var fname = document.getElementById('fname').value
+        var lname = document.getElementById('lname').value
+
+        let template = document.getElementById('template').innerHTML
+
+        let render = Mustache.render(template, {first:fname, last:lname});
+
+        document.getElementById('result').innerHTML = render;
+    }
+</script>
+</html>
