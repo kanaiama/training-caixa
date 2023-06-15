@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/mustache/mustache.min.js"></script>
+    <link rel="stylesheet" href="css/prazoCarencia.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <div class="title">
+        <h2>Escolha o prazo de carência do contato</h2>
+    </div>
+
+    <div class="container">
+        <div class="caixa-prazo">
+            <div class="caixa-title">
+                <span>Prazo carência</span>
+                <script id="template-prazo" type="x-tmpl-mustache">
+                    <div class="tempo">
+                        <p>{{prazo}}</p>
+                    </div>
+                </script>
+            </div>
+        </div>
+
+        <div class="info">
+            <img src="img/info_outline.png" alt="" >
+        </div>
+    </div>
+
+    <div class="container-scroll">
+        <div class="barra">
+            <div class="bola" draggable="true">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="min-max">
+        <span>Mínimo: <b>1 mês</b></span>
+        <span>Máximo: <b>6 meses</b></span>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Banking Caixa</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header" style="background-color: #2A6FA8">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="conta-banco">
+                <ul>
+                    <li>
+                        Agência <span class="aditional">000</span>
+                    </li>
+                    <li>
+                        Operação <span class="aditional">001</span>
+                    </li>
+                    <li>
+                        Conta <span class="aditional">00000000-0</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="form-saldo">
+                <img src="img/menu-arrow-buttom_N17.png" alt="" onclick="mostrarSaldo()" id="mostrarSaldo" style="cursor: pointer;">
+                <div class="saldo">
+                    <span>Meu saldo</span>
+                    <div id="modalSaldo" class="hide">
+                        <span>$ 3000,00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="exit">
+                <img src="img/exit_to_app.png" alt="" style="cursor: pointer">
+                <span style="cursor:pointer">Sair</span>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
