@@ -16,45 +16,46 @@
 <style>
     /* Estilizando o slider */
     .ui-slider {
-      height: 10px;
-      background-color: #C4C4C4;
-      position: relative; 
+        height: 10px;
+        background-color: #C4C4C4;
+        position: relative;
     }
 
     .ui-slider-range {
-      background-color: #54BBAB;
+        background-color: #54BBAB;
     }
 
     .ui-slider-handle:hover,
     .ui-slider-handle:focus,
     .ui-slider-handle:active {
-      background-color: #54BBAB;
+        background-color: #54BBAB;
     }
 
     .ui-slider-handle {
-      background-color: #54BBAB;
-      border-radius: 50%;
-      border: none;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      position: relative; 
-      z-index: 2; 
+        background-color: #54BBAB;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        position: relative;
+        z-index: 2;
     }
 
 
 
     .slider-number {
-      position: absolute;
-      top: -100px; 
-      width: 40px;
-      height: 20px;
-      background-color: #54BBAB;
-      color: #fff;
-      font-size: 12px;
-      text-align: center;
-      line-height: 20px;
-      border-radius: 4px;
+        position: absolute;
+        top: -100px;
+        width: 40px;
+        height: 20px;
+        background-color: #54BBAB;
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 4px;
     }
-  </style>
+</style>
+
 <body>
     <div class="title">
         <h2>Escolha o prazo de carência do contato</h2>
@@ -66,33 +67,42 @@
                 <span>Prazo carência</span>
                 <div class="prazo-mes">
                     <input type="text" id="mes" readonly
-                    style="border:0; color:#48586C; font-weight:bold; width: 10px; font-size: 14px;">
-                    <label for="mes" style="border:0; color:#48586C; font-weight:bold; font-size: 13px;" id="label_mes">meses</label>
+                        style="border:0; color:#48586C; font-weight:bold; width: 10px; font-size: 14px;">
+                    <label for="mes" style="border:0; color:#48586C; font-weight:bold; font-size: 13px;"
+                        id="label_mes">meses</label>
                 </div>
             </div>
         </div>
 
         <div class="info">
             <img src="img/info_outline.png" alt="">
+                <p class="info-text">Lorem Impsum</p>
         </div>
     </div>
-
-
 
     <div class="progress-bar">
-        <div id="slider-range-min" style="margin-top: 30px; width:70%;">
-           
+        <div id="slider-range-min" style="margin-top: 30px; width:70%;"></div>
+    </div>
+    <div class="min-max">
+        <span>Mínimo: <b>1 mês</b></span>
+        <span>Máximo: <b>6 meses</b></span>
+    </div>
+
+    <div class="content" style="display: flex; justify-content: center; gap: 15px;">
+        <div class="checkbox">
+            <input type="checkbox" id="chk1" class="checkbox" name="chk">
+        </div>
+        <div class="text-content">
+            <p style="color: #48586C; font-weight: 400; font-size: 17px; font-family: FUTURA LT;">Não quero prazo de carência no <br> contrato de consignação.</p>
         </div>
     </div>
 
-    <div class="min-max">
-        <span>Mínimo: <b>1 mês</b></span>
-
-        <span>Máximo: <b>6 meses</b> </span>
+    <div class="warning">
+        <img src="img/report_problem.png" alt="">
+        <div class="content-text">
+            <span>Caso deseje a opção com carência, a primeira parcela será adiada de acordo com o prazo estipulado pelo INSS e haverá ajuste do valor líquido a receber em razão da incidência de juros de acerto.</span>
+        </div>
     </div>
-
-    <script src="js/dragDrop.js"></script>
-    <script src="js/progressBar.js"></script>
 </body>
 
 </html>
@@ -114,5 +124,5 @@
         $("#slider-range-min .slide-number").text($("#slider-range-min").slider("value"));
 
     });
-    
+
 </script>
