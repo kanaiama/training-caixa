@@ -48,6 +48,7 @@ header {
   justify-content: space-between;
   height: 100%;
   align-items: center;
+  z-index: 999;
 }
 
 
@@ -62,6 +63,7 @@ header {
   height: 2px;
   background-color: black;
   transition: 0.5s;
+  z-index: 999;
 
 }
 
@@ -86,7 +88,7 @@ a {
     justify-content: space-between;
     padding: 20px;
     align-items: flex-start;
-    z-index: -9999;
+    z-index: 999;
     transition: 0.5s;
   }
 
@@ -117,6 +119,8 @@ a {
     gap: 10px;
     margin-left: -20px;
     color: #FFFFFf;
+    z-index: 998;
+
   }
 
   header .container .navbar ul .liRestante {
@@ -193,13 +197,13 @@ a {
     opacity: 100%;
     width: 500px;
     left: 0;
-
     z-index: 9999;
   }
 
   header>.container.active .consignacao {
     transition: background-color 0.7s ease-in-out;
     background-color: #F59300;
+    z-index: 999;
 
   }
 

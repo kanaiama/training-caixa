@@ -10,3 +10,4 @@ checkbox.addEventListener('change', function() {
     button.classList.remove('enabled');
   }
 });
+

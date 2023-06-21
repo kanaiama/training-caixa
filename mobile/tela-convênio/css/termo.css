@@ -21,13 +21,10 @@
 }
 
 .checkbox input {
-    border: 0;
-    clip: rect(0 0 0 0);
     height: 1px;
     margin: -1px;
     overflow: hidden;
     padding: 0;
-    position: absolute;
     width: 1px;
 }
 
@@ -52,6 +49,7 @@
     top: 50%;
     left: 0;
     transform: translate(0, -50%);
+    z-index: -1;
 }
 
 
@@ -70,6 +68,7 @@
 .checkbox input:checked+label::before {
     background: #ff7212;
     border-color: #ff7212;
+    z-index: -1;
 }
 
 .checkbox input:checked+label::after {
@@ -113,10 +112,10 @@ button {
     bottom: 74px;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
     ;
+    z-index: -1;
 }
 
 button:disabled {
-    opacity: 0.5;
     cursor: not-allowed;
     font-weight: bold;
 }

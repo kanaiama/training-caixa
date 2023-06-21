@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-sc   ale=1.0">
-    <title>Convênio</title>
-    <link rel="stylesheet" href="css/convenio.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorização Convenente</title>
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/button.css">
-
+    <link rel="stylesheet" href="css/autorizacaoConvenente.css">
 </head>
-
 <body>
     <header>
         <div class="topo">
@@ -64,47 +60,73 @@
     <main>
         <div class="container-titulo">
             <div class="tituloBanner">
-                <p>Tipo de convênio</p>
+                <p>Autorização Convenente</p>
             </div>
             <div class="subtitulo">
-                <p>Escolha o tipo de convênio:</p>
+                <p style="font-weight: bold;">Para continuar, insira a sua assinatura eletrônica:</p>
             </div>
         </div>
 
-        <div class="banner">
-            <div class="caixa1">
-                <div class="content">
-                    <img src="img/inss-logo 1.png" alt="">
-                    <div class="text-content">
-                        <span>Aposentados e Pensionistas <br> INSS</span>
-                        <p>Para beneficiário do INSS</p>
-                    </div>
-                </div>
-                <div class="arrowRight">
-                    <a href="termo.html"><img src="img/arrowRight.png" alt=""></a>
+
+        <div class="form-cadeado">
+            <img src="img/cadeado.png" alt="">
+            <p>Informe sua assinatura eletrônica</p>
+        </div>
+
+        <div class="campo-senha">
+            <div class="caixa">
+                <input type="password" id="passwd1" maxlength="1">
+            </div>
+            <div class="caixa">
+                <input type="password" id="passwd2" maxlength="1">
+            </div>
+            <div class="caixa">
+                <input type="password" id="passwd3" maxlength="1">
+            </div>
+            <div class="caixa">
+                <input type="password" id="passwd4" maxlength="1">
+            </div>
+            <div class="caixa">
+                <input type="password" id="passwd5" maxlength="1">
+            </div>
+            <div class="caixa">
+                <input type="password" id="passwd6" maxlength="1">
+            </div>
+        </div>
+        
+        <div class="linha">
+            <div></div>
+        </div>
+
+        <div class="final-text">
+            <span>Assinatura eletrônica usada para acessar recursos do app.</span>
+
+            <div class="info-conta">
+                <p>Conta utilizada</p>
+                <div class="dados">
+                    <span>Ag. 0239</span>
+                    <span>Op. 1243</span>
+                    <span>Cc. 3042323-3</span>
                 </div>
             </div>
+        </div>
 
-            <div class="caixa">
-                <div class="content2">
-                    <img src="img/local_atm.png" alt="">
+        <div class="help">
+            <img src="img/Question Circle.png" alt="">
+            <a href="#">Preciso de ajuda</a>
+        </div>
 
-                    <div class="text-content2">
-                        <span>Demais Convênios</span>
-                        <p>Selecione essa opção para consultar ou contratar outros convênios</p>
-                    </div>
-                </div>
-                <div class="arrowRight2">
-                    <img src="img/arrowRight.png" alt="">
-                </div>
+        <div class="botoes" style="margin-bottom: 20px;">
+            <div class="btn">
+                <button id="btnNext" disabled accesskey><a href="#">Confirmar</a></button>
+            </div>
+            <div class="btn">
+                <button class="btnVoltar"><a href="termo.html">Voltar</a></button>
             </div>
         </div>
     </main>
 
     <script src="js/hamburguer.js"></script>
-    <script src="node_modules/mustache/mustache.min.js"></script>
-    <script src="https://unpkg.com/mustache@latest"></script>
-    <script src="js/mustache.js"></script>
+    <script src="js/buttonChkSenha.js"></script>
 </body>
-
 </html>
