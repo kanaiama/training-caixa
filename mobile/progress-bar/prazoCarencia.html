@@ -127,16 +127,29 @@
 
 <script>
     $(function () {
+        const mesMin = $("#ipt_mes_min").val();
+        const mesMax = $("#ipt_mes_max").val();
+
         $("#slider-range-min").slider({
             range: "min",
-            min: 1,
-            max: 6,
+            min: parseInt(mesMin),
+            max: parseInt(mesMax),
             value: 1,
             slide: function (event, ui) {
-                $("#mes").val(ui.value)
-                $("#slider-range-min .slide-number").text(ui.value);
+                $("#mes").val(ui.value);
+                $("#ipt_mes_min").val(ui.value);
+                $("#ipt_mes_max").val(ui.value);
+                console.log(mesMax);
             }
         });
+
         $("#mes").val($("#slider-range-min").slider("value"));
+        $("#ipt_mes_min").val($("#slider-range-min").slider("min"));
+        $("#ipt_mes_max").val($("#slider-range-min").slider("max"));
+
+        $("#ipt_mes_max").on("input", function() {
+            const newMax = $(this).val();
+            $("#slider-range-min").slider("option", "max", parseInt(newMax));
+        });
     });
 </script>
