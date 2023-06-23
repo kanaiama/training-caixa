@@ -107,14 +107,8 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
-    /* identical to box height, or 20px */
-
     display: flex;
     align-items: center;
     text-decoration-line: underline;
-
-    /* fixa main / azul_cx-standard */
-
     color: #005DA8;
-
 }

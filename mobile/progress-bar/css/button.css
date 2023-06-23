@@ -4,11 +4,13 @@
     gap: 27px;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 .btn {
-    background: #E8E9EC;
+    background: #F39200;
 }
+
 
 button {
     width: 327px;
@@ -18,24 +20,12 @@ button {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.14), 0px 3px 4px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
     ;
     z-index: -1;
-}
-
-button:disabled {
-    cursor: not-allowed;
-    font-weight: bold;
-}
-z
-button.enabled {
     background-color: #F39200;
     transition: background-color 0.2s ease-in;
     color: #fff;
     font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    
 }
 
-.btnVoltar {
-    box-sizing: border-box;
-    border: 1px solid #4C556C;
-    border-radius: 4px;
-    background-color: #FFFFFF;
-    color: #4C556C;
-}

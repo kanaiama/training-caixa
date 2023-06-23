@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="node_modules/mustache/mustache.min.js"></script>
+    <title>Barra de progressão</title>
     <link rel="stylesheet" href="css/prazoCarencia.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/button.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
@@ -67,7 +66,7 @@
                 <span>Prazo carência</span>
                 <div class="prazo-mes">
                     <input type="text" id="mes" readonly
-                        style="border:0; color:#48586C; font-weight:bold; width: 10px; font-size: 14px;">
+                        style="border:0; color:#48586C; font-weight:bold; width: 20px; font-size: 14px;">
                     <label for="mes" style="border:0; color:#48586C; font-weight:bold; font-size: 13px;"
                         id="label_mes">meses</label>
                 </div>
@@ -83,9 +82,11 @@
     <div class="progress-bar">
         <div id="slider-range-min" style="margin-top: 30px; width:70%;"></div>
     </div>
-    <div class="min-max">
-        <span>Mínimo: <b>1 mês</b></span>
-        <span>Máximo: <b>6 meses</b></span>
+    <div class="min-max">   
+        <span>Mínimo: <b> <input type="text" id="ipt_mes_min" disabled >mês</b></span>
+        <img src="img/edit.png" alt="" id="img_campo_min" onclick="editarPrazo('min')">
+        <span>Máximo: <b> <input type="text" id="ipt_mes_max" disabled>meses</b></span>
+        <img src="img/edit.png" alt="" onclick="editarPrazo('max')" id="img_campo_max">
     </div>
 
     <div class="content" style="display: flex; justify-content: center; gap: 15px;">
@@ -103,6 +104,22 @@
             <span>Caso deseje a opção com carência, a primeira parcela será adiada de acordo com o prazo estipulado pelo INSS e haverá ajuste do valor líquido a receber em razão da incidência de juros de acerto.</span>
         </div>
     </div>
+
+    <div class="form-valor">
+        <div class="caixa-valor">
+            <div class="valor-seguro">
+                <span>Valor Seguro</span>
+            </div>
+            <span id="valorSeguro">$</span>
+        </div>
+    </div>
+
+    <div class="botoes" style="margin-bottom: 20px;">
+        <div class="btn">
+            <button id="btnNext">Simular</button>
+        </div>
+    </div>
+    <script src="js/prazoCarencia.js"></script>
 </body>
 
 </html>
@@ -121,8 +138,5 @@
             }
         });
         $("#mes").val($("#slider-range-min").slider("value"));
-        $("#slider-range-min .slide-number").text($("#slider-range-min").slider("value"));
-
     });
-
 </script>

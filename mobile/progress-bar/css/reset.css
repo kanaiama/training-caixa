@@ -17,3 +17,12 @@ body {
     font-family: 'Futura LT', sans-serif;
     font-weight: normal;
 }
+
+ a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: unset;
+}
+button{
+    cursor: pointer;
+}
