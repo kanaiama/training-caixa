@@ -57,7 +57,7 @@
 
 <body>
     <div class="title">
-        <h2>Escolha o prazo de carência do contato</h2>
+        <h2>Escolha o prazo de carência do contrato</h2>
     </div>
 
     <div class="container">
@@ -83,7 +83,7 @@
         <div id="slider-range-min" style="margin-top: 30px; width:70%;"></div>
     </div>
     <div class="min-max">
-        <span>Mínimo: <b> <input type="text" id="ipt_mes_min" disabled>mês</b></span>
+        <span>Mínimo: <input type="text" id="ipt_mes_min" disabled><b id="textMes"> mês(es)</b></span>
         <img src="img/edit.png" alt="" id="img_campo_min" onclick="editarPrazo('min')">
         <span>Máximo: <b> <input type="text" id="ipt_mes_max" disabled>meses</b></span>
         <img src="img/edit.png" alt="" onclick="editarPrazo('max')" id="img_campo_max">
@@ -128,6 +128,8 @@
 
 
 <script>
+    const checkbox = document.getElementById("chk1");
+
     $(function () {
         const mesMin = $("#ipt_mes_min");
         const mesMax = $("#ipt_mes_max");
@@ -164,9 +166,16 @@
 
             if (atualMax < novoMin) {
                 console.log(atualMax, novoMin);
-                alert("O valor máximo não pode ser menor que o valor mínimo!");
             } else {
                 $("#slider-range-min").slider("option", "min", novoMin);
+            }
+
+            if (novoMin > 1) {
+                $("#textMes").html("meses")
+            }
+
+            if (novoMin == 1) {
+                $("#textMes").html("mês")
             }
         });
 
@@ -178,18 +187,17 @@
 
             if (atualMin > novoMax) {
                 console.log(atualMin, novoMax);
-                alert("O valor máximo não pode ser menor que o valor mínimo!");
 
             } else {
                 $("#slider-range-min").slider("option", "max", novoMax);
             }
         });
-    
+
 
         //Calculando valor seguro
         function calcularValorSeguro(prazo) {
             const valorSeguroCalculado = prazo * 100; // Exemplo
-            
+
             $("#valorSeguro").html(valorSeguroCalculado);
         }
     });

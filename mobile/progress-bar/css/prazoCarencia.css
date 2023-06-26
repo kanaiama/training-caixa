@@ -101,6 +101,7 @@
     padding: 15px;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .min-max span {
@@ -122,6 +123,7 @@
 .min-max input {
     width: 30px;
     margin-right: 6px;
+    text-align: center;
 }
 
 .min-max b {
