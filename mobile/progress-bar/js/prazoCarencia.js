@@ -16,7 +16,17 @@ function editarPrazo(tipo) {
 
 const mesMin = document.querySelector("#ipt_mes_min");
 const mesMax = document.querySelector("#ipt_mes_max");
+const warning = document.querySelector('#text-alert');
 
+mesMin.addEventListener('submit', e => {
+    e.preventDefault()
+
+    const searchMin = mesMin.value.trim();
+
+    if(!searchMin) {
+        warning.innerHTML= `<li class="warning-message">Insira um termo válido!</li>`
+    }
+})
 
 mesMin.addEventListener("keypress", function (e) {
     // const keyCode = (e.keyCode ? e.keyCode : e.wich);
