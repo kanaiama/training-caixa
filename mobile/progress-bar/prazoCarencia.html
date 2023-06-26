@@ -75,15 +75,15 @@
 
         <div class="info">
             <img src="img/info_outline.png" alt="">
-                <p class="info-text">Lorem Impsum</p>
+            <p class="info-text">Lorem Impsum</p>
         </div>
     </div>
 
     <div class="progress-bar">
         <div id="slider-range-min" style="margin-top: 30px; width:70%;"></div>
     </div>
-    <div class="min-max">   
-        <span>Mínimo: <b> <input type="text" id="ipt_mes_min" disabled >mês</b></span>
+    <div class="min-max">
+        <span>Mínimo: <b> <input type="text" id="ipt_mes_min" disabled>mês</b></span>
         <img src="img/edit.png" alt="" id="img_campo_min" onclick="editarPrazo('min')">
         <span>Máximo: <b> <input type="text" id="ipt_mes_max" disabled>meses</b></span>
         <img src="img/edit.png" alt="" onclick="editarPrazo('max')" id="img_campo_max">
@@ -94,14 +94,16 @@
             <input type="checkbox" id="chk1" class="checkbox" name="chk">
         </div>
         <div class="text-content">
-            <p style="color: #48586C; font-weight: 400; font-size: 17px; font-family: FUTURA LT;">Não quero prazo de carência no <br> contrato de consignação.</p>
+            <p style="color: #48586C; font-weight: 400; font-size: 17px; font-family: FUTURA LT;">Não quero prazo de
+                carência no <br> contrato de consignação.</p>
         </div>
     </div>
 
     <div class="warning">
         <img src="img/report_problem.png" alt="">
         <div class="content-text">
-            <span>Caso deseje a opção com carência, a primeira parcela será adiada de acordo com o prazo estipulado pelo INSS e haverá ajuste do valor líquido a receber em razão da incidência de juros de acerto.</span>
+            <span>Caso deseje a opção com carência, a primeira parcela será adiada de acordo com o prazo estipulado pelo
+                INSS e haverá ajuste do valor líquido a receber em razão da incidência de juros de acerto.</span>
         </div>
     </div>
 
@@ -116,7 +118,7 @@
 
     <div class="botoes" style="margin-bottom: 20px;">
         <div class="btn">
-            <button id="btnNext">Simular</button>
+            <button id="btnNext">Contratar</button>
         </div>
     </div>
     <script src="js/prazoCarencia.js"></script>
@@ -127,29 +129,70 @@
 
 <script>
     $(function () {
-        const mesMin = $("#ipt_mes_min").val();
-        const mesMax = $("#ipt_mes_max").val();
+        const mesMin = $("#ipt_mes_min");
+        const mesMax = $("#ipt_mes_max");
 
+
+        //Configurando o slider
         $("#slider-range-min").slider({
             range: "min",
-            min: parseInt(mesMin),
-            max: parseInt(mesMax),
+            min: 1,
+            max: 6,
             value: 1,
             slide: function (event, ui) {
+                //Fazendo a input mes atualizar o valor conforme arrasta o slider
                 $("#mes").val(ui.value);
-                $("#ipt_mes_min").val(ui.value);
-                $("#ipt_mes_max").val(ui.value);
-                console.log(mesMax);
+
+                //Puxando o valor atual do slide (em qual mês ele está) e chamando a função calcularValorSeguro sempre que arrastar o slider
+                const prazo = ui.value;
+                calcularValorSeguro(prazo);
             }
         });
 
-        $("#mes").val($("#slider-range-min").slider("value"));
-        $("#ipt_mes_min").val($("#slider-range-min").slider("min"));
-        $("#ipt_mes_max").val($("#slider-range-min").slider("max"));
 
-        $("#ipt_mes_max").on("input", function() {
-            const newMax = $(this).val();
-            $("#slider-range-min").slider("option", "max", parseInt(newMax));
+        //Setando os valores inicias do slider
+        $("#mes").val($("#slider-range-min").slider("value"));
+        mesMin.val($("#slider-range-min").slider("option", "min"));
+        mesMax.val($("#slider-range-min").slider("option", "max"));
+
+
+        // Funcão para atualizar o valor minimo do prazo
+        mesMin.on("input", function () {
+            const novoMin = parseInt($(this).val());
+            const atualMin = $("#slider-range-min").slider("option", "min");
+            const atualMax = $("#slider-range-min").slider("option", "max");
+
+            if (atualMax < novoMin) {
+                console.log(atualMax, novoMin);
+                alert("O valor máximo não pode ser menor que o valor mínimo!");
+            } else {
+                $("#slider-range-min").slider("option", "min", novoMin);
+            }
         });
+
+        // Funcão para atualizar o valor maximo do prazo
+        mesMax.on("input", function () {
+            const novoMax = parseInt($(this).val());
+            const atualMin = $("#slider-range-min").slider("option", "min");
+            const atualMax = $("#slider-range-min").slider("option", "max");
+
+            if (atualMin > novoMax) {
+                console.log(atualMin, novoMax);
+                alert("O valor máximo não pode ser menor que o valor mínimo!");
+
+            } else {
+                $("#slider-range-min").slider("option", "max", novoMax);
+            }
+        });
+    
+
+        //Calculando valor seguro
+        function calcularValorSeguro(prazo) {
+            const valorSeguroCalculado = prazo * 100; // Exemplo
+            
+            $("#valorSeguro").html(valorSeguroCalculado);
+        }
     });
+
+
 </script>
