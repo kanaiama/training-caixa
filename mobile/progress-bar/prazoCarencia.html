@@ -57,7 +57,7 @@
 
 <body>
     <div class="title">
-        <h2>Escolha o prazo de carência do contrato</h2>
+        <h2>Escolha o prazo de carência do <br> contrato</h2>
     </div>
 
     <div class="container">
@@ -68,7 +68,7 @@
                     <input type="text" id="mes" readonly
                         style="border:0; color:#48586C; font-weight:bold; width: 20px; font-size: 14px;">
                     <label for="mes" style="border:0; color:#48586C; font-weight:bold; font-size: 13px;"
-                        id="label_mes">meses</label>
+                        id="label_mes">mês</label>
                 </div>
             </div>
         </div>
@@ -82,11 +82,15 @@
     <div class="progress-bar">
         <div id="slider-range-min" style="margin-top: 30px; width:70%;"></div>
     </div>
-    <div class="min-max">
-        <span>Mínimo: <input type="text" id="ipt_mes_min" disabled><b id="textMes"> mês(es)</b></span>
-        <img src="img/edit.png" alt="" id="img_campo_min" onclick="editarPrazo('min')">
-        <span>Máximo: <b> <input type="text" id="ipt_mes_max" disabled>meses</b></span>
-        <img src="img/edit.png" alt="" onclick="editarPrazo('max')" id="img_campo_max">
+    <div class="min-max" id="min-max">
+        <form id="form">
+            <span>Mínimo: <input onkeypress="return event.charCode >= 48" min="1" id="ipt_mes_min" disabled required><b
+                    id="textMes"> mês</b></span> 
+            <img src="img/edit.png" alt="" id="img_campo_min" onclick="editarPrazo('min')" class="img">
+            <span>Máximo: <b> <input onkeypress="return event.charCode >= 48" min="1" id="ipt_mes_max" disabled
+                        required>meses</b></span>
+            <img src="img/edit.png" alt="" onclick="editarPrazo('max')" id="img_campo_max" class="img">
+        </form>
     </div>
 
     <ul id="text-alert" class="text-alert"></ul>
@@ -130,12 +134,11 @@
 
 
 <script>
-
     const checkbox = document.getElementById("chk1");
 
     $(function () {
-        const mesMin = $("#ipt_mes_min");
-        const mesMax = $("#ipt_mes_max");
+        let mesMin = $("#ipt_mes_min");
+        let mesMax = $("#ipt_mes_max");
 
 
         //Configurando o slider
@@ -148,12 +151,12 @@
                 //Fazendo a input mes atualizar o valor conforme arrasta o slider
                 $("#mes").val(ui.value);
 
-                //Puxando o valor atual do slide (em qual mês ele está) e chamando a função calcularValorSeguro sempre que arrastar o slider
-                const prazo = ui.value;
+                //Puxando o valor atual do slide (em qual mês ele está) 
+                //e chamando a função calcularValorSeguro sempre que arrastar o slider
+                let prazo = ui.value;
                 calcularValorSeguro(prazo);
             }
         });
-
 
         //Setando os valores inicias do slider
         $("#mes").val($("#slider-range-min").slider("value"));
@@ -162,16 +165,8 @@
 
 
         // Funcão para atualizar o valor minimo do prazo
-        mesMin.on("input", function () {
-            const novoMin = parseInt($(this).val());
-            const atualMin = $("#slider-range-min").slider("option", "min");
-            const atualMax = $("#slider-range-min").slider("option", "max");
-
-            if (atualMax < novoMin) {
-                console.log(atualMax, novoMin);
-            } else {
-                $("#slider-range-min").slider("option", "min", novoMin);
-            }
+        mesMin.on("input", function (e) {
+            let novoMin = parseInt($(this).val());
 
             if (novoMin > 1) {
                 $("#textMes").html("meses")
@@ -184,9 +179,10 @@
 
         // Funcão para atualizar o valor maximo do prazo
         mesMax.on("input", function () {
-            const novoMax = parseInt($(this).val());
-            const atualMin = $("#slider-range-min").slider("option", "min");
-            const atualMax = $("#slider-range-min").slider("option", "max");
+            let novoMax = parseInt($(this).val());
+            let atualMin = $("#slider-range-min").slider("option", "min");
+            let atualMax = $("#slider-range-min").slider("option", "max");
+
 
             if (atualMin > novoMax) {
                 console.log(atualMin, novoMax);
@@ -197,13 +193,19 @@
         });
 
 
-        //Calculando valor seguro
-        function calcularValorSeguro(prazo) {
-            const valorSeguroCalculado = prazo * 100; // Exemplo
-
-            $("#valorSeguro").html(valorSeguroCalculado);
-        }
     });
 
+    //Calculando valor seguro
+    function calcularValorSeguro(prazo) {
+        const valorSeguroCalculado = prazo * 100; // Exemplo
 
+        $("#valorSeguro").html(valorSeguroCalculado);
+        const labelMes = document.getElementById("label_mes");
+
+        if (prazo === 1) {
+            labelMes.innerHTML = "mês";
+        } else {
+            labelMes.innerHTML = "meses";
+        }
+    }
 </script>
