@@ -75,7 +75,7 @@
 
         <div class="info">
             <img src="img/info_outline.png" alt="">
-            <p class="info-text">Lorem Impsum</p>
+            <p class="info-text">Lorem Impsum maam</p>
         </div>
     </div>
 
@@ -85,11 +85,13 @@
     <div class="min-max" id="min-max">
         <form id="form">
             <span>Mínimo: <input onkeypress="return event.charCode >= 48" min="1" id="ipt_mes_min" disabled required><b
-                    id="textMes"> mês</b></span> 
-            <img src="img/edit.png" alt="" id="img_campo_min" onclick="editarPrazo('min')" class="img">
-            <span>Máximo: <b> <input onkeypress="return event.charCode >= 48" min="1" id="ipt_mes_max" disabled
-                        required>meses</b></span>
-            <img src="img/edit.png" alt="" onclick="editarPrazo('max')" id="img_campo_max" class="img">
+                    id="textMes">mês</b></span>
+            <span>Máximo: <input onkeypress="return event.charCode >= 48" min="1" id="ipt_mes_max" disabled
+                    required><b>meses</b></span>
+            <div class="info">
+                <img src="img/edit.png" alt="" onclick="editarPrazo()" id="img_campo_max" class="img">
+                <p class="info-editar">Editar</p>
+            </div>
         </form>
     </div>
 
@@ -112,7 +114,7 @@
                 INSS e haverá ajuste do valor líquido a receber em razão da incidência de juros de acerto.</span>
         </div>
     </div>
-
+                
     <div class="form-valor">
         <div class="caixa-valor">
             <div class="valor-seguro">
@@ -127,6 +129,7 @@
             <button id="btnNext">Contratar</button>
         </div>
     </div>
+
     <script src="js/prazoCarencia.js"></script>
 </body>
 
@@ -134,72 +137,109 @@
 
 
 <script>
-    const checkbox = document.getElementById("chk1");
-
     $(function () {
         let mesMin = $("#ipt_mes_min");
         let mesMax = $("#ipt_mes_max");
 
-
-        //Configurando o slider
+        // Configurando o slider
         $("#slider-range-min").slider({
             range: "min",
             min: 1,
             max: 6,
             value: 1,
             slide: function (event, ui) {
-                //Fazendo a input mes atualizar o valor conforme arrasta o slider
+                // Fazendo a input mes atualizar o valor conforme arrasta o slider
                 $("#mes").val(ui.value);
 
-                //Puxando o valor atual do slide (em qual mês ele está) 
-                //e chamando a função calcularValorSeguro sempre que arrastar o slider
+                // Puxando o valor atual do slide (em qual mês ele está) 
+                // e chamando a função calcularValorSeguro sempre que arrastar o slider
                 let prazo = ui.value;
                 calcularValorSeguro(prazo);
             }
         });
 
-        //Setando os valores inicias do slider
+        // Setando os valores iniciais do slider
         $("#mes").val($("#slider-range-min").slider("value"));
         mesMin.val($("#slider-range-min").slider("option", "min"));
         mesMax.val($("#slider-range-min").slider("option", "max"));
 
+        let campoMesMin = document.getElementById("ipt_mes_min");
+        let campoMesMax = document.getElementById("ipt_mes_max");
+        let progresso = document.getElementById("slider-range-min");
+        let img_campo = document.querySelector("#img_campo_max");
 
-        // Funcão para atualizar o valor minimo do prazo
+
+
+        // Evento de mudança da checkbox
+        $("#chk1").change(function () {
+            if (this.checked) {
+                let progresso = document.getElementById("slider-range-min");
+                campoMesMin.disabled = true;
+                campoMesMin.style.border = "none";
+
+                campoMesMax.disabled = true;
+                campoMesMax.style.border = "none";
+
+                progresso.style.pointerEvents = "none";
+                progresso.style.opacity = 0.5;
+
+                img_campo.style.pointerEvents = "none";
+                img_campo.style.opacity = 0.5;
+
+                $("#valorSeguro").html('$3000');
+
+            } else {
+                campoMesMin.disabled = false;
+                campoMesMin.style.border = "1px solid #C4C4C4";
+
+                campoMesMax.disabled = false;
+                campoMesMax.style.border = "1px solid #C4C4C4";
+
+                progresso.style.pointerEvents = "auto";
+                progresso.style.opacity = 1;
+
+                img_campo.style.pointerEvents = "auto";
+                img_campo.style.opacity = 1;
+                
+                $("#valorSeguro").html('$');
+                $("#valorSeguro").html(calcularValorSeguro(prazo));
+            }
+        });
+
+
+        // Função para atualizar o valor mínimo do prazo
         mesMin.on("input", function (e) {
             let novoMin = parseInt($(this).val());
 
             if (novoMin > 1) {
-                $("#textMes").html("meses")
+                $("#textMes").html("meses");
             }
 
-            if (novoMin == 1) {
-                $("#textMes").html("mês")
+            if (novoMin === 1) {
+                $("#textMes").html("mês");
             }
         });
 
-        // Funcão para atualizar o valor maximo do prazo
+        // Função para atualizar o valor máximo do prazo
         mesMax.on("input", function () {
             let novoMax = parseInt($(this).val());
             let atualMin = $("#slider-range-min").slider("option", "min");
             let atualMax = $("#slider-range-min").slider("option", "max");
 
-
             if (atualMin > novoMax) {
                 console.log(atualMin, novoMax);
-
             } else {
                 $("#slider-range-min").slider("option", "max", novoMax);
             }
         });
-
-
     });
 
-    //Calculando valor seguro
+    // Calculando valor seguro
     function calcularValorSeguro(prazo) {
         const valorSeguroCalculado = prazo * 100; // Exemplo
 
-        $("#valorSeguro").html(valorSeguroCalculado);
+        $("#valorSeguro").html(`$` + valorSeguroCalculado);
+
         const labelMes = document.getElementById("label_mes");
 
         if (prazo === 1) {
@@ -208,4 +248,6 @@
             labelMes.innerHTML = "meses";
         }
     }
+
+
 </script>
