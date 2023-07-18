@@ -1,0 +1,68 @@
+.titulo {
+    margin: 12px 0;
+    font-family: 'faceboldLT';
+    color: #005CA9;
+}
+
+.img_ocupacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_ocupacao img{
+    height: 150px;
+    width: 160px;
+}
+
+.texto {
+    display: flex;
+    text-align: justify;
+}
+
+.texto p {
+    color: var(--texto-grafite-escuro, #3A4859);
+    font-family: Futura LT;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+    letter-spacing: 0.25px;
+}
+
+.etapa1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: -20px;
+}
+.etapa2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: -20px;
+}
+.etapa3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: -20px;
+}
+.etapa4 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: -20px;
+}
+
+.etapas {
+    padding: 20px;
+}
+
+.etapas span {
+    font-size: 13px;
+}
+.etapas img {
+    height: 64px;
+    width: 35px;
+}
