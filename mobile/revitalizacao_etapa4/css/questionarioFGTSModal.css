@@ -44,8 +44,6 @@
 
 table .lista tr {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     border-bottom: 1px solid var(--cinza-mdio, #C4C4C4);;
 }
 
