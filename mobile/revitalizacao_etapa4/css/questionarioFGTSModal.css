@@ -2,14 +2,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -10px;
+}
+
+.modal_topo h2 {
+    color: #005CA9;
+    font-family: 'faceboldLT';
 }
 
 .modal_topo img {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
 }
 
-/* Caixa de pesquisa de processos */
+/* Caixa de pesquisa de estados */
+
+.jackiechan {
+    display: none;
+    position: fixed;
+    background-color: rgb(31, 29, 26, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important; 
+}
+
+.dialog dialog {
+    padding: 2x;
+    border-radius: 12px;
+}
+
 
 .pesquisa {
     background-color: white;
@@ -20,7 +50,9 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 2px 6px;
+    height: 5vh;
+    padding: 3px;
+    margin-bottom: 4px;
     border-radius: 5px;
     background: white;
     box-shadow: 0px 0px 1px 1px #005CA9;
@@ -33,18 +65,22 @@
 }
 
 .input_pesquisa img {
-    height: 40px;
+    height: 10px;
     cursor: pointer;
 }
 
 .input_pesquisa input {
     width: 100%;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 2px;
 }
 
 table .lista tr {
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
     border-bottom: 1px solid var(--cinza-mdio, #C4C4C4);;
+    width: 100%;
+    height: 7vh;
 }
 
 .lista_estados{

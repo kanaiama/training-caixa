@@ -1,198 +1,49 @@
-function openModal(id) {
-
-    console.log(id);
-
-    modal.style.display = "block";
-
-    if (id == 'modal_estadoCivil') {
-
-        // Lista do modal
-
-        lista_estadoResidencia.style.display = 'block';
-
-        lista_municipioCidade.style.display = 'none';
-
-
-
-
-        // titulos
-
-        tituloModal_estado.style.display = 'block';
-
-        tituloModal_municipio.style.display = 'none';
-
-    }
-
-    if (id == 'modal_uniao_estavel') {
-
-        // Lista do modal
-
-        lista_municipioCidade.style.display = 'block';
-
-        lista_estadoResidencia.style.display = 'none';
-
-
-
-
-
-        // titulos
-
-        tituloModal_estado.style.display = 'none';
-
-        tituloModal_municipio.style.display = 'block';
-
-    }
-
-
-
-
-}
-
-
-
-
-// ==== Sections/opções ===
-
-
-
-
-function escolhaEstadoResidencia(id) {
-
-    var escolhaid = id.innerHTML;
-
-    var pegarTexto = document.getElementById(id).innerText;
-
-    texto_estado_residencia.innerHTML = `${pegarTexto}`;
-
-    texto_estado_residencia.style.color = '#0077DB';
-
-    modal.style.display = "none";
-
-
-
-
-    var pegarEstado = document.getElementById('texto_estado_residencia').innerHTML;
-
-
-
-
-    if (pegarEstado != 'Ex: São Paulo') {
-
-        estadoResidencia_escolhido = true;
-
-        console.log(estadoResidencia_escolhido);
-
-        proximo()
-
-    }
-
-
-
-
-    console.log(pegarTexto);
-
-
-
-
-    if (pegarTexto != 'Ex: São Paulo') {
-
-
-
-
-        municipio_cidade.style.display = 'block';
-
-
-
-
-    }
-
-
-
-
-    proximo()
-
-
-
-
-}
-
-
-
-
-
-function escolhaMunicipioCidade(id) {
-
-    var escolhaid = id.innerHTML;
-
-    var pegarTexto = document.getElementById(id).innerText;
-
-    texto_municipio_cidade.innerHTML = `${pegarTexto}`;
-
-    texto_municipio_cidade.style.color = '#0077DB';
-
-    modal.style.display = "none";
-
-
-
-
-    var pegarMunicipioCidade = document.getElementById('texto_municipio_cidade').innerHTML;
-
-
-
-
-    if (pegarMunicipioCidade != 'Ex: Campinas') {
-
-        municipioCidade_escolhido = true;
-
-        console.log(municipioCidade_escolhido);
-
-        proximo()
-
-    }
-
-
-
-
-}
-
-
-
-
-const estadosList = document.getElementById('lista_estadoResidencia');
-
-const buscaInput = document.getElementById('buscar_estado');
-
-
-
-
-function filtrarEstados() {
-
-    const termoBusca = buscaInput.value.toLowerCase();
-
-    const estados = estadosList.getElementsByTagName('li');
-
-
-
-
-    for (let i = 0; i < estados.length; i++) {
-
-        const estado = estados[i];
-
-        const nomeEstado = estado.textContent.toLowerCase();
-
-
-
-
-        if (nomeEstado.indexOf(termoBusca) > -1) {
-
-            estado.style.display = 'block';
-
-        } else {
-
-            estado.style.display = 'none';
-
-        }
-
-    }
-
-}
+  // Obter referências aos elementos
+  const inputPesquisa = document.getElementById('ipt_pesquisa');
+  const buttonModal = document.querySelector('.button_modal');
+  const listaEstados = document.querySelector('.lista_estados');
+
+  // Obter todas as linhas de estados
+  const estadoRows = document.querySelectorAll('.lista_estados tr');
+
+  // Função para filtrar os estados com base na entrada do usuário
+  function pesquisarProcesso() {
+    const termoPesquisa = inputPesquisa.value.toLowerCase();
+
+    estadoRows.forEach(row => {
+      const nomeEstado = row.querySelector('td').textContent.toLowerCase();
+      if (nomeEstado.includes(termoPesquisa)) {
+        row.style.display = 'table-row';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Função para lidar com o clique na linha de estado
+  function handleStateClick(event) {
+    const estadoSelecionado = event.target.textContent;
+    buttonModal.querySelector('span').textContent = estadoSelecionado;
+    fecharDialog();
+  }
+
+  // Anexar ouvinte de evento ao elemento de entrada para filtragem
+  inputPesquisa.addEventListener('keyup', pesquisarProcesso);
+
+  // Anexar ouvintes de eventos de clique às linhas de estado
+  estadoRows.forEach(row => {
+    row.addEventListener('click', handleStateClick);
+  });
+
+  // Função para abrir/fechar o diálogo
+  function abrirDialog() {
+    document.getElementById('jackiechan').style.display = 'block';
+  }
+
+  function fecharDialog() {
+    document.getElementById('jackiechan').style.display = 'none';
+  }
+
+  // Anexar ouvinte de evento para abrir/fechar o diálogo
+  buttonModal.addEventListener('click', abrirDialog);
+  document.querySelector('.modal_topo img').addEventListener('click', fecharDialog);

@@ -10,13 +10,11 @@
     <link rel="stylesheet" href="css/questionarioFGTS.css">
     <link rel="stylesheet" href="css/questionarioFGTSModal.css">
     <link rel="stylesheet" href="fonts/futura-font-face.css">
-    <link rel="stylesheet" href="fonts/futuraLT-font-face.css">
 </head>
 
 <body>
     <script src="js/modal.js"></script>
-    <script src="js/modal2.js"></script>
-    <main style="padding: 5px;">
+    <main>
         <div class="numero_contrato">
             <p>Nº do Contrato: <span>144441782991-7</span></p>
         </div>
@@ -51,11 +49,18 @@
         </div>
 
         <div class="estado">
-            <span>Estado</span>
+            <span>Selecione o Estado de sua residência</span>
             <div class="button_modal" id="abrirModal">
-                <span>
-                    Ex: São Paulo
-                </span>
+                <span>Ex: São Paulo</span>
+                <img src="img/chevronDown.svg" alt="">
+            </div>
+        </div>
+
+        <div class="municipio">
+            <span>Municipio/Cidade</span>
+            <div class="button_modal" id="abrirModal2">
+                <span>Campinas</span>
+                <img src="img/chevronDown.svg" alt="">
             </div>
         </div>
 
@@ -67,8 +72,8 @@
                         <img src="img/fechar-close.png" alt="">
                     </div>
                     <div class="pesquisa">
-                        <div class="input_pesquisa" id="input_select" onkeyup="pesquisarProcesso()">
-                            <img src="img/lupa-pesquisar-procurar.png" alt="" style="height: 30px; width: 30px;">
+                        <div class="input_pesquisa" type="search" id="input_select" onkeyup="pesquisarProcesso()">
+                            <img src="img/lupa-pesquisar-procurar.png" alt="" style="height: 20px; width: 20px;">
                             <input type="text" id="ipt_pesquisa" placeholder="Busque aqui">
                         </div>
                     </div>
@@ -153,6 +158,95 @@
                                 </tr>
                                 <tr>
                                     <td>Tocantins</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </dialog>
+            </div>
+        </div>
+
+        <div class="jackiechan" id="jackiechan2">
+            <div class="dialog">
+                <dialog>
+                    <div class="modal_topo">
+                        <h2>Municipo/Cidade</h2>
+                        <img src="img/fechar-close.png" alt="">
+                    </div>
+                    <div class="pesquisa">
+                        <div class="input_pesquisa" type="search">
+                            <img src="img/lupa-pesquisar-procurar.png" alt="" style="height: 20px; width: 20px;">
+                            <input type="text" placeholder="Busque aqui">
+                        </div>
+                    </div>
+
+                    <div class="lista_estados">
+                        <table>
+                            <tbody class="lista">
+                                <tr>
+                                    <td>Rio Branco</td>
+                                </tr>
+                                <tr>
+                                    <td>Cruzeiro do Sul</td>
+                                </tr>
+                                <tr>
+                                    <td>Tarauacá</td>
+                                </tr>
+                                <tr>
+                                    <td>Sena Madureira</td>
+                                </tr>
+                                <tr>
+                                    <td>Feijó</td>
+                                </tr>
+                                <tr>
+                                    <td>Brasiléia</td>
+                                </tr>
+                                <tr>
+                                    <td>Senador Guiomard</td>
+                                </tr>
+                                <tr>
+                                    <td>Mâncio Lima</td>
+                                </tr>
+                                <tr>
+                                    <td>Epitaciolândia</td>
+                                </tr>
+                                <tr>
+                                    <td>Xapuri</td>
+                                </tr>
+                                <tr>
+                                    <td>Marechal Thaumaturgo</td>
+                                </tr>
+                                <tr>
+                                    <td>Porto Acre</td>
+                                </tr>
+                                <tr>
+                                    <td>Plácido de Castro</td>
+                                </tr>
+                                <tr>
+                                    <td>Rodrigue Alves</td>
+                                </tr>
+                                <tr>
+                                    <td>Acrelândia</td>
+                                </tr>
+                                <tr>
+                                    <td>Bujari</td>
+                                </tr>
+                                <tr>
+                                    <td>Manoel Urbano</td>
+                                </tr>
+                                <tr>
+                                    <td>Porto Walter</td>
+                                </tr>
+                                <tr>
+                                    <td>Capixaba</td>
+                                </tr>
+                                <tr>
+                                    <td>Jordão</td>
+                                </tr>
+                                <tr>
+                                    <td>Assis Brasil</td>
+                                </tr>
+                                <tr>
+                                    <td>Santa Rosa do Purus</td>
                                 </tr>
                             </tbody>
                         </table>

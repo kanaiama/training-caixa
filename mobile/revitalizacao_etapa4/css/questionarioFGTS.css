@@ -63,12 +63,15 @@
 .questions input {
     border-bottom: 1px solid;
     width: 100%;
-    height: 35px;
+    height: 30px;
     font-family: "Futura LT";
+    color: #0077DB;
+    font-size: 16px;
 }
 
 .questions input::placeholder {
-    font-size: 15px;
+    font-size: 14px;
+    color: #A6A6A6;
 }
 
 .segunda_pergunta {
@@ -89,8 +92,23 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 10px;
 }
+
+.estado span {
+    color: #3A4859;
+}
+
+.municipio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.municipio span {
+    color: #3A4859;
+}
+
 
 
 /* Modal */
@@ -100,28 +118,21 @@
     background-color: #fff;
     box-shadow: none;
     border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+}
+
+.button_modal img {
+    width: 10vw;
+    height: 4vh;
 }
 
 
 .button_modal span {
     color: #A6A6A6;
-}
-
-.jackiechan {
-    display: none;
-    position: fixed;
-    background-color: rgb(31, 29, 26, 0.5);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.dialog {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important; 
+    font-family: "Futura LT";
+    font-size: 14px;
 }
 

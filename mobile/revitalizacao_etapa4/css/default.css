@@ -14,7 +14,9 @@
   html {
     scroll-behavior: smooth;
   }
-
+  main {
+    padding: 5px;
+  }
   ul {
     list-style: none;
   }
@@ -34,7 +36,7 @@
   h1,
   h2,
   h3{
-    font-family: "futura bold";
+    font-family: "futura-bold";
   }
   
   h1,
