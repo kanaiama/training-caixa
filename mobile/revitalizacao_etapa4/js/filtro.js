@@ -1,49 +1,88 @@
-  // Obter referências aos elementos
-  const inputPesquisa = document.getElementById('ipt_pesquisa');
-  const buttonModal = document.querySelector('.button_modal');
-  const listaEstados = document.querySelector('.lista_estados');
+const estados = [
+    "Alagoas",
+    "Amapá",
+    "Amazonas",
+    "Bahia",
+    "Ceará",
+    "Distrito Federal",
+    "Espírito Santo",
+    "Goiás",
+    "Maranhão",
+    "Mato Grosso",
+    "Mato Grosso do Sul",
+    "Minas Gerais",
+    "Pará",
+    "Paraíba",
+    "Paraná",
+    "Pernambuco",
+    "Piauí",
+    "Rio de Janeiro",
+    "Rio Grande do Norte",
+    "Rio Grande do Sul",
+    "Rondônia",
+    "Roraima",
+    "Santa Catarina",
+    "São Paulo",
+    "Sergipe",
+    "Tocantins"
+];
 
-  // Obter todas as linhas de estados
-  const estadoRows = document.querySelectorAll('.lista_estados tr');
+const municipios = [
+  "Rio Branco", "Cruzeiro do Sul", "Tarauacá", "Sena Madureira", "Feijó",
+  "Brasiléia", "Senador Guiomard", "Mâncio Lima", "Epitaciolândia", "Xapuri",
+  "Marechal Thaumaturgo", "Porto Acre", "Plácido de Castro", "Rodrigue Alves",
+  "Acrelândia", "Bujari", "Manoel Urbano", "Porto Walter", "Capixaba",
+  "Jordão", "Assis Brasil", "Santa Rosa do Purus"
+];
 
-  // Função para filtrar os estados com base na entrada do usuário
-  function pesquisarProcesso() {
-    const termoPesquisa = inputPesquisa.value.toLowerCase();
+function pesquisarEstado() {
+  let input = ipt_pesquisa.value.toLowerCase();
+  let listaEstados = document.querySelector(".lista_estados tbody");
+  listaEstados.innerHTML = "";
 
-    estadoRows.forEach(row => {
-      const nomeEstado = row.querySelector('td').textContent.toLowerCase();
-      if (nomeEstado.includes(termoPesquisa)) {
-        row.style.display = 'table-row';
-      } else {
-        row.style.display = 'none';
-      }
-    });
+  let estadosCorrespondentes = estados.filter(estado => estado.toLowerCase().includes(input));
+
+  if (estadosCorrespondentes.length > 0) {
+    let listaPlotada = "";
+
+    for (const estado of estadosCorrespondentes) {
+      listaPlotada += `
+                  <tr>
+                      <td class="x_estado">${estado}</td>
+                  </tr>
+              `;
+    }
+
+    listaEstados.innerHTML = listaPlotada;
+  } else {
+    listaEstados.innerHTML = "<tr><td colspan='1' class='nenhumProcesso'>Nenhum estado encontrado!</td></tr>";
   }
+}
 
-  // Função para lidar com o clique na linha de estado
-  function handleStateClick(event) {
-    const estadoSelecionado = event.target.textContent;
-    buttonModal.querySelector('span').textContent = estadoSelecionado;
-    fecharDialog();
+ipt_pesquisa.addEventListener("input", pesquisarEstado);
+
+
+function pesquisarMunicipio() {
+  let input = ipt_pesquisaMunicipio.value.toLowerCase();
+  let listaMunicipios = document.querySelector(".lista_municipios tbody");
+  listaMunicipios.innerHTML = "";
+
+  let municipiosCorrespondentes = municipios.filter(municipio => municipio.toLowerCase().includes(input));
+  if (municipiosCorrespondentes.length > 0) {
+    let listaPlotada = "";
+
+    for (const municipio of municipiosCorrespondentes) {
+      listaPlotada += `
+                  <tr>
+                      <td class="x_municipio">${municipio}</td>
+                  </tr>
+              `;
+    }
+
+    listaMunicipios.innerHTML = listaPlotada;
+  } else {
+    listaMunicipios.innerHTML = "<tr><td colspan='1' class='nenhumProcesso'>Nenhum municipio encontrado!</td></tr>";
   }
+}
 
-  // Anexar ouvinte de evento ao elemento de entrada para filtragem
-  inputPesquisa.addEventListener('keyup', pesquisarProcesso);
-
-  // Anexar ouvintes de eventos de clique às linhas de estado
-  estadoRows.forEach(row => {
-    row.addEventListener('click', handleStateClick);
-  });
-
-  // Função para abrir/fechar o diálogo
-  function abrirDialog() {
-    document.getElementById('jackiechan').style.display = 'block';
-  }
-
-  function fecharDialog() {
-    document.getElementById('jackiechan').style.display = 'none';
-  }
-
-  // Anexar ouvinte de evento para abrir/fechar o diálogo
-  buttonModal.addEventListener('click', abrirDialog);
-  document.querySelector('.modal_topo img').addEventListener('click', fecharDialog);
+ipt_pesquisaMunicipio.addEventListener("input", pesquisarMunicipio);

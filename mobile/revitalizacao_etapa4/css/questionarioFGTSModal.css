@@ -100,3 +100,19 @@ table .lista tr {
     letter-spacing: 0.25px;
 }
 
+.lista_municipios{
+    height: 130px;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    animation: aparecer_planilha 500ms ease-out;
+}
+
+.lista_municipios td {
+    color: var(--texto-grafite-escuro, #3A4859);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 18px; /* 112.5% */
+    letter-spacing: 0.25px;
+}

@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <script src="js/modal.js"></script>
     <main>
         <div class="numero_contrato">
             <p>Nº do Contrato: <span>144441782991-7</span></p>
@@ -72,9 +71,9 @@
                         <img src="img/fechar-close.png" alt="">
                     </div>
                     <div class="pesquisa">
-                        <div class="input_pesquisa" type="search" id="input_select" onkeyup="pesquisarProcesso()">
+                        <div class="input_pesquisa" type="search" id="input_select">
                             <img src="img/lupa-pesquisar-procurar.png" alt="" style="height: 20px; width: 20px;">
-                            <input type="text" id="ipt_pesquisa" placeholder="Busque aqui">
+                            <input type="text" id="ipt_pesquisa" placeholder="Busque aqui" onkeyup="pesquisarEstado()">
                         </div>
                     </div>
 
@@ -82,83 +81,83 @@
                         <table>
                             <tbody class="lista">
                                 <tr>
-                                    <td>Alagoas</td>
+                                    <td class="x_estado">Alagoas</td>
                                 </tr>
                                 <tr>
-                                    <td>Amapá</td>
+                                    <td class="x_estado">Amapá</td>
                                 </tr>
                                 <tr>
-                                    <td>Amazonas</td>
+                                    <td class="x_estado">Amazonas</td >
                                 </tr>
                                 <tr>
-                                    <td>Bahia</td>
+                                    <td class="x_estado">Bahia</td >
                                 </tr>
                                 <tr>
-                                    <td>Ceará</td>
+                                    <td class="x_estado">Ceará</td >
                                 </tr>
                                 <tr>
-                                    <td>Distrito Federal</td>
+                                    <td class="x_estado">Distrito Federal</td >
                                 </tr>
                                 <tr>
-                                    <td>Espírito Santo</td>
+                                    <td class="x_estado">Espírito Santo</td >
                                 </tr>
                                 <tr>
-                                    <td>Goiás</td>
+                                    <td class="x_estado">Goiás</td >
                                 </tr>
                                 <tr>
-                                    <td>Maranhão</td>
+                                    <td class="x_estado">Maranhão</td >
                                 </tr>
                                 <tr>
-                                    <td>Mato Grosso</td>
+                                    <td class="x_estado">Mato Grosso</td>
                                 </tr>
                                 <tr>
-                                    <td>Mato Grosso do Sul</td>
+                                    <td class="x_estado">Mato Grosso do Sul</td>
                                 </tr>
                                 <tr>
-                                    <td>Minas Gerais</td>
+                                    <td class="x_estado">Minas Gerais</td>
                                 </tr>
                                 <tr>
-                                    <td>Pará</td>
+                                    <td class="x_estado">Pará</td>
                                 </tr>
                                 <tr>
-                                    <td>Paraíba</td>
+                                    <td class="x_estado">Paraíba</td>
                                 </tr>
                                 <tr>
-                                    <td>Paraná</td>
+                                    <td class="x_estado">Paraná</td>
                                 </tr>
                                 <tr>
-                                    <td>Pernambuco</td>
+                                    <td class="x_estado">Pernambuco</td>
                                 </tr>
                                 <tr>
-                                    <td>Piauí</td>
+                                    <td class="x_estado">Piauí</td>
                                 </tr>
                                 <tr>
-                                    <td>Rio de Janeiro</td>
+                                    <td class="x_estado">Rio de Janeiro</td>
                                 </tr>
                                 <tr>
-                                    <td>Rio Grande do Norte</td>
+                                    <td class="x_estado">Rio Grande do Norte</td>
                                 </tr>
                                 <tr>
-                                    <td>Rio Grande do Sul</td>
+                                    <td class="x_estado">Rio Grande do Sul</td>
                                 </tr>
                                 <tr>
-                                    <td>Rondônia</td>
+                                    <td class="x_estado">Rondônia</td>
                                 </tr>
                                 <tr>
-                                    <td>Roraima</td>
+                                    <td class="x_estado">Roraima</td>
                                 </tr>
                                 <tr>
-                                    <td>Santa Catarina</td>
+                                    <td class="x_estado">Santa Catarina</td>
                                 </tr>
                                 <tr>
-                                    <td>São Paulo</td>
+                                    <td class="x_estado">São Paulo</td>
                                 </tr>
                                 <tr>
-                                    <td>Sergipe</td>
+                                    <td class="x_estado">Sergipe</td>
                                 </tr>
                                 <tr>
-                                    <td>Tocantins</td>
-                                </tr>
+                                    <td class="x_estado">Tocantins</td>
+                                </tr> 
                             </tbody>
                         </table>
                 </dialog>
@@ -175,78 +174,78 @@
                     <div class="pesquisa">
                         <div class="input_pesquisa" type="search">
                             <img src="img/lupa-pesquisar-procurar.png" alt="" style="height: 20px; width: 20px;">
-                            <input type="text" placeholder="Busque aqui">
+                            <input type="text" placeholder="Busque aqui" onkeyup="pesquisarMunicipio()" id="ipt_pesquisaMunicipio">
                         </div>
                     </div>
 
-                    <div class="lista_estados">
+                    <div class="lista_municipios">
                         <table>
                             <tbody class="lista">
                                 <tr>
-                                    <td>Rio Branco</td>
+                                    <td class="x_municipio">Rio Branco</td>
                                 </tr>
                                 <tr>
-                                    <td>Cruzeiro do Sul</td>
+                                    <td class="x_municipio">Cruzeiro do Sul</td>
                                 </tr>
                                 <tr>
-                                    <td>Tarauacá</td>
+                                    <td class="x_municipio">Tarauacá</td>
                                 </tr>
                                 <tr>
-                                    <td>Sena Madureira</td>
+                                    <td class="x_municipio">Sena Madureira</td>
                                 </tr>
                                 <tr>
-                                    <td>Feijó</td>
+                                    <td class="x_municipio">Feijó</td>
                                 </tr>
                                 <tr>
-                                    <td>Brasiléia</td>
+                                    <td class="x_municipio">Brasiléia</td>
                                 </tr>
                                 <tr>
-                                    <td>Senador Guiomard</td>
+                                    <td class="x_municipio">Senador Guiomard</td>
                                 </tr>
                                 <tr>
-                                    <td>Mâncio Lima</td>
+                                    <td class="x_municipio">Mâncio Lima</td>
                                 </tr>
                                 <tr>
-                                    <td>Epitaciolândia</td>
+                                    <td class="x_municipio">Epitaciolândia</td>
                                 </tr>
                                 <tr>
-                                    <td>Xapuri</td>
+                                    <td class="x_municipio">Xapuri</td>
                                 </tr>
                                 <tr>
-                                    <td>Marechal Thaumaturgo</td>
+                                    <td class="x_municipio">Marechal Thaumaturgo</td>
                                 </tr>
                                 <tr>
-                                    <td>Porto Acre</td>
+                                    <td class="x_municipio">Porto Acre</td>
                                 </tr>
                                 <tr>
-                                    <td>Plácido de Castro</td>
+                                    <td class="x_municipio">Plácido de Castro</td>
                                 </tr>
                                 <tr>
-                                    <td>Rodrigue Alves</td>
+                                    <td class="x_municipio">Rodrigue Alves</td>
                                 </tr>
                                 <tr>
-                                    <td>Acrelândia</td>
+                                    <td class="x_municipio">Acrelândia</td>
                                 </tr>
                                 <tr>
-                                    <td>Bujari</td>
+                                    <td class="x_municipio">Bujari</td>
                                 </tr>
                                 <tr>
-                                    <td>Manoel Urbano</td>
+                                    <td class="x_municipio">Manoel Urbano</td>
                                 </tr>
                                 <tr>
-                                    <td>Porto Walter</td>
+                                    <td class="x_municipio">Porto Walter</td>
                                 </tr>
                                 <tr>
-                                    <td>Capixaba</td>
+                                    <td class="x_municipio">Capixaba</td>
                                 </tr>
                                 <tr>
-                                    <td>Jordão</td>
+                                    <td class="x_municipio">Jordão</td>
                                 </tr>
                                 <tr>
-                                    <td>Assis Brasil</td>
+                                    <td class="x_municipio">Assis Brasil</td>
                                 </tr>
                                 <tr>
-                                    <td>Santa Rosa do Purus</td>
+                                    <td class="x_municipio">Santa Rosa do Purus</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -258,13 +257,16 @@
     <footer>
         <div class="buttons">
             <div class="btn">
-                <button class="btn_continuar"><a href="">Próximo</a></button>
+                <button class="btn_continuar" disabled><a href="">Próximo</a></button>
             </div>
             <div class="btn">
                 <button class="btn_voltar"><a href="introducaoEtapa4.html">Voltar</a></button>
             </div>
         </div>
     </footer>
+
+    <script src="js/modal.js"></script>
+    <script src="js/filtro.js"></script>
 </body>
 
 </html>
